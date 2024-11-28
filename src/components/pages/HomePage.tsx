@@ -9,10 +9,10 @@ export const HomePage = () => {
       <Canvas camera={{ position: [0, 0, 8], fov: 100 }}>
         <OrbitControls
           enableZoom={false}
-          autoRotate={false}
-          autoRotateSpeed={0.5}
+          autoRotate={true}
+          autoRotateSpeed={0.3}
           enablePan={false}
-          zoomSpeed={0.25}
+          zoomSpeed={0.2}
           dampingFactor={0.1}
         />
         <Suspense fallback={"Loading"}>
