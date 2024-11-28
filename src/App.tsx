@@ -1,7 +1,12 @@
 import "./App.css";
+import { Routing } from "./Routing";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Routing></Routing>
+    </>
+  );
 }
 
 export default App;
