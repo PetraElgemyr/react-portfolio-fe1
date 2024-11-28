@@ -1,7 +1,14 @@
 import "./App.css";
+import { Navbar } from "./components/Navbar";
+import { Routing } from "./Routing";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Navbar></Navbar>
+      <Routing></Routing>
+    </>
+  );
 }
 
 export default App;
