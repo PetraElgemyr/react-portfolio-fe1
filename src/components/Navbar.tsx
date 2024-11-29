@@ -3,6 +3,8 @@ import { Pages } from "./enums/Pages";
 import { LinkUrls } from "./enums/LinkUrls";
 
 export const Navbar = () => {
+  console.log("hje");
+
   return (
     <nav>
       <li>
