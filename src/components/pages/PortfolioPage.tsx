@@ -1,5 +1,9 @@
 import { ColFlexedCenter } from "../../styled/Common/Common";
 import { ProjectCard } from "../../styled/Portfolio/ProjectCard";
+import {
+  Image,
+  ProjectImageContainer,
+} from "../../styled/Portfolio/ProjectImageContainer";
 
 export const PortfolioPage = () => {
   return (
@@ -7,7 +11,15 @@ export const PortfolioPage = () => {
       <h1>Portfolio</h1>
 
       <ColFlexedCenter>
-        <ProjectCard>Projekt placeholder</ProjectCard>
+        <ProjectCard>
+          <ProjectImageContainer>
+            Projekt placeholder
+            <Image
+            // src={`https:${dog.img[0].fields.file.url}`}
+            // alt={project.name}
+            ></Image>
+          </ProjectImageContainer>
+        </ProjectCard>
         <ProjectCard>Projekt placeholder</ProjectCard>
         <ProjectCard>Projekt placeholder</ProjectCard>
         <ProjectCard>Projekt placeholder</ProjectCard>
