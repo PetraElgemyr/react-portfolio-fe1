@@ -1,6 +1,7 @@
 .scene {
   width: 100vw;
   height: 100vh;
+  // height: 110vh;
   font-family: sans-serif;
   /* background-image: linear-gradient(
     rgba(56, 18, 128, 0.993),
@@ -12,11 +13,10 @@
     /* rgb(49, 46, 177) */
     #01040e, #2c334d
   );
+  z-index: -100;
 }
 
-// testar lite
-// .canvas {
-//   z-index: 1;
-//   margin: 0;
-//   padding: 0;
-// }
+canvas {
+  z-index: -100;
+}
+

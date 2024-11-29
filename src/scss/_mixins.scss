@@ -1,0 +1,49 @@
+@use "variables" as v;
+
+@mixin button {
+  border: 2px solid v.$primary-btn-color;
+  border-radius: 30px;
+  padding: 4%;
+  color: v.$primary-btn-color;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: rgba(131, 131, 131, 0.15);
+
+  &:hover {
+    background-color: rgba(255, 132, 0);
+    color: white;
+  }
+}
+
+@mixin centering-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centering-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin tablet {
+  @media screen and (min-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: v.$laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: v.$desktop) {
+    @content;
+  }
+}
