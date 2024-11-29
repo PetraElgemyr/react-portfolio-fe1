@@ -4,6 +4,7 @@ import { ContactPage } from "./components/pages/ContactPage";
 import { AboutPage } from "./components/pages/AboutPage";
 import { PortfolioPage } from "./components/pages/PortfolioPage";
 import { Navbar } from "./components/Navbar";
+import { SkillsPage } from "./components/pages/SkillsPage";
 
 export const Routing = () => {
   return (
@@ -14,6 +15,7 @@ export const Routing = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
       </Routes>
     </Router>
   );
