@@ -29,6 +29,11 @@ export const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to={LinkUrls.SKILLS} className="nav-link">
+              {Pages.SKILLS}
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to={LinkUrls.PORTFOLIO} className="nav-link">
               {Pages.PORTFOLIO}
             </Link>
@@ -43,63 +48,3 @@ export const Navbar = () => {
     </>
   );
 };
-
-{
-  // const [mobileState, setMobileState] = useState<boolean>(true);
-  // const [hamburgerName, setHamburgerName] =
-  //   useState<string>("hamburger.inactive");
-  // const [navMenuName, setNavMenuName] = useState<string>("nav-menu.inactive");
-  // const [mobileActive, setMobileActive] = useState<boolean>(false);
-  // const toggleHamburgerName = () => {
-  //   if (mobileActive) {
-  //     setHamburgerName("hamburger.inactive");
-  //     setNavMenuName("nav-menu.inactive");
-  //   } else {
-  //     setHamburgerName("hamburger.active");
-  //     setNavMenuName("nav-menu.active");
-  //   }
-  //   setMobileActive(!mobileActive);
-  // };
-  /* 
-      <header className="header">
-        <nav className="navbar">
-          <a href="#home" id="navLogo" className="nav-logo">
-            PETRA ELGEMYR
-          </a>
-
-          <ul className={navMenuName}>
-            <i id="closeBtn" onClick={toggleHamburgerName}>
-              &#10006;
-            </i>
-            <li className="nav-item">
-              <a href="#home" className="nav-link">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#about" className="nav-link">
-                About me
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#projects" className="nav-link">
-                Work
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#skills" className="nav-link">
-                Skills
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#contact" className="nav-link">
-                Contact
-              </a>
-            </li>
-          </ul>
-          <div className={hamburgerName} onClick={toggleHamburgerName}>
-            <i className="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-      </header> */
-}

@@ -6,9 +6,7 @@ import * as THREE from "three";
 
 export const NameText = () => {
   const { width: w } = useThree((state) => state.viewport);
-
   const ref = useRef<THREE.Mesh>(null);
-
   const { viewport } = useThree();
 
   const scale = viewport.width < 8 ? viewport.width * 0.25 : 0.9;
