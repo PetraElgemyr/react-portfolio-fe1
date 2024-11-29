@@ -1,4 +1,4 @@
-import { Col } from "../../styled/Common/Common";
+import { ColFlexedCenter } from "../../styled/Common/Common";
 import { ProjectCard } from "../../styled/Portfolio/ProjectCard";
 
 export const PortfolioPage = () => {
@@ -6,10 +6,12 @@ export const PortfolioPage = () => {
     <>
       <h1>Portfolio</h1>
 
-      <Col>
-        <ProjectCard />
-        <ProjectCard />
-      </Col>
+      <ColFlexedCenter>
+        <ProjectCard>Projekt placeholder</ProjectCard>
+        <ProjectCard>Projekt placeholder</ProjectCard>
+        <ProjectCard>Projekt placeholder</ProjectCard>
+        <ProjectCard>Projekt placeholder</ProjectCard>
+      </ColFlexedCenter>
     </>
   );
 };
