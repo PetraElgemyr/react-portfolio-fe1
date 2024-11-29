@@ -1,0 +1,100 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+
+.navbar {
+    display: none; 
+    background-color: v.$primary-blue;
+    padding: 10px;
+    z-index: 1000;
+    color: white;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background-color: v.$primary-blue;
+      color: white;
+
+      li.nav-item {
+        padding: 10px;
+        background-color: v.$primary-blue;
+        text-decoration: none;
+        color: white;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .nav-link {
+          text-decoration: none;
+          color: white;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  
+    &.-open {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: v.$primary-blue;
+      z-index: 1000;
+      text-align: center;
+      text-decoration: none;
+  
+      ul {
+        background-color: v.$primary-blue;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .hamburger {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    cursor: pointer;
+    background-color: v.$primary-blue;
+    z-index: 100;
+
+    i {
+      font-size: 24px;
+      color: white;
+    }
+  }
+  
+  @media (min-width: v.$tablet) {
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 20px;
+
+      ul {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+  
+    .hamburger {
+      display: none; 
+    }
+  }
+  
