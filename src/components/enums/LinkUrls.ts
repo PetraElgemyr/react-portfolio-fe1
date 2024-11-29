@@ -1,6 +1,6 @@
 export enum LinkUrls {
     HOME = "/",
     CONTACT = "/contact",
-    PROJECTS = "/projects",
+    PORTFOLIO = "/portfolio",
     ABOUT = "/about"
 }
