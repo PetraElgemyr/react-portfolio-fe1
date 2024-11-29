@@ -29,8 +29,8 @@ export const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={LinkUrls.PROJECTS} className="nav-link">
-              {Pages.PROJECTS}
+            <Link to={LinkUrls.PORTFOLIO} className="nav-link">
+              {Pages.PORTFOLIO}
             </Link>
           </li>
           <li className="nav-item">
