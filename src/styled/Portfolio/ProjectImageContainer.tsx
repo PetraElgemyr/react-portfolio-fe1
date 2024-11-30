@@ -7,6 +7,7 @@ export const ProjectImageContainer = styled.div`
   padding: 0;
   object-fit: cover;
   object-position: center;
+  border-radius: 5px 5px 0 0;
 
   @media screen and (${devices.laptop}) {
     height: unset;
@@ -21,7 +22,7 @@ export const ProjectImage = styled.img`
   height: 240px;
   object-fit: cover;
   object-position: center;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
   margin: 0;
   padding: 0;
 

@@ -14,15 +14,12 @@ export const ProjectCard = ({ project }: IProjectCardProps) => {
     <>
       {project ? (
         <ProjectContainer>
-          {project.img}
+          {/* {project.img}
           {project.name}
-          {project.description}
+          {project.description} */}
 
           <ProjectImageContainer>
-            <ProjectImage
-            // src={`https:${project.img}}`}
-            // alt={project.name}
-            ></ProjectImage>
+            <ProjectImage src={project.img} alt={project.name}></ProjectImage>
           </ProjectImageContainer>
         </ProjectContainer>
       ) : (

@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { devices } from "../Variables/Devices";
 
 export const ProjectContainer = styled.section`
-  border: 1px solid white;
   width: 100%;
   height: 200px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 6px 12px #ffffff42;
 
   @media screen and (${devices.tablet}) {
     width: 75%;
