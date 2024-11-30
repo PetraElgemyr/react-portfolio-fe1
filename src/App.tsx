@@ -36,6 +36,25 @@ function App() {
         img: "https://petraelgemyr.netlify.app/todo2.8fe83784.jpg",
         techniques: ["TypeScript", "SCSS"],
       },
+      {
+        id: 3,
+        name: "Movie API",
+        description:
+          "MovieAPI is a basic fullstack project. The site presents a list of well known movies. You can search for movies to see if they are on the list, show the list and add movies to the list. The project is made with JavaScript and GraphQL, which I use Apollo Server for. The data is stored in Google Sheet with SheetDB.",
+        github: "https://github.com/PetraElgemyr/graphql-exercise",
+        img: "      https://petraelgemyr.netlify.app/api2.0d6a1f7f.jpg",
+        techniques: ["GraphQL", "JavaScript", "CSS"],
+      },
+      {
+        id: 4,
+        name: "Köksmästarn Webshop",
+        description:
+          'This webshop was my first agile group project. The assignment was to create a webshop that could simulate a purchase. The customer can add products to the shoppingcart, sort the products and "purchase" the chosen products. This project was made with Maisah Juevesano and Hama Jaff.',
+        github: "https://github.com/maisahjuevesano/AgiltProjektarbete",
+        liveLink: "https://koksmastarn.netlify.app/",
+        img: "https://petraelgemyr.netlify.app/kmaster1.73086324.jpg",
+        techniques: ["TypeScript", "SCSS"],
+      },
     ]);
   }, []);
 
