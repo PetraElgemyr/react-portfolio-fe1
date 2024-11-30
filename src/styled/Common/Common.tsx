@@ -9,11 +9,12 @@ export const Row = styled.div`
 export const RowCentered = styled(Row)`
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const Col = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export const ColCentered = styled(Col)`
@@ -34,22 +35,23 @@ export const ColCenteredResponsive = styled(ColCentered)`
 
 export const ColFlexedCenter = styled(ColCentered)`
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
-  gap: 20px;
+  padding: 6%;
+  gap: 30px;
 
   @media screen and (${devices.laptop}) {
-    gap: 40px;
+    flex-direction: row;
+    gap: 60px;
     padding: 4%;
+    align-items: flex-start;
   }
 
   @media screen and (${devices.laptopL}) {
-    gap: 60px;
+    gap: 80px;
   }
 
   @media screen and (${devices.fourK}) {
-    gap: 85px;
+    gap: 95px;
   }
 `;

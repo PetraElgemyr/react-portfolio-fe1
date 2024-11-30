@@ -1,27 +1,30 @@
 import styled from "styled-components";
 import { devices } from "../Variables/Devices";
 
-export const ProjectCard = styled.section`
-  border: 1px solid white;
+export const ProjectContainer = styled.section`
   width: 100%;
-  height: 200px;
+  border-radius: 5px 5px 2px 2px;
+  box-shadow: 0 6px 12px #ffffff42;
+  padding-bottom: 8%;
 
   @media screen and (${devices.tablet}) {
     width: 75%;
-    height: 300px;
+    border-radius: 10px 10px 2px 2px;
+    padding-bottom: 4%;
   }
 
   @media screen and (${devices.laptop}) {
     width: 45%;
-    height: 350px;
+    box-shadow: 0 6px 15px #ffffff42;
+    padding-bottom: 3%;
   }
 
   @media screen and (${devices.laptopL}) {
-    height: 450px;
+    border-radius: 15px 15px 2px 2px;
+    padding-bottom: 2%;
   }
 
   @media screen and (${devices.fourK}) {
     width: 30%;
-    height: 550px;
   }
 `;
