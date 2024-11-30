@@ -14,14 +14,10 @@ export const ProjectImageContainer = styled.div`
   }
 
   @media screen and (${devices.laptop}) {
-    height: unset;
   }
 
   @media screen and (${devices.laptopL}) {
     border-radius: 15px 15px 0 0;
-  }
-
-  @media screen and (${devices.fourK}) {
   }
 `;
 
@@ -35,11 +31,16 @@ export const ProjectImage = styled.img`
   padding: 0;
 
   @media screen and (${devices.tablet}) {
-    min-height: unset;
+    max-height: 300px;
     border-radius: 10px 10px 0 0;
+  }
+
+  @media screen and (${devices.laptop}) {
+    height: 310px;
   }
 
   @media screen and (${devices.laptopL}) {
     border-radius: 15px 15px 0 0;
+    height: 400px;
   }
 `;
