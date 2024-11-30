@@ -13,7 +13,7 @@ export const RowCentered = styled(Row)`
 
 export const Col = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export const ColCentered = styled(Col)`
@@ -34,15 +34,16 @@ export const ColCenteredResponsive = styled(ColCentered)`
 
 export const ColFlexedCenter = styled(ColCentered)`
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
-  gap: 20px;
+  padding: 6%;
+  gap: 30px;
 
   @media screen and (${devices.laptop}) {
+    flex-direction: row;
     gap: 40px;
     padding: 4%;
+    align-items: flex-start;
   }
 
   @media screen and (${devices.laptopL}) {
