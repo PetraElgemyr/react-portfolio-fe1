@@ -1,4 +1,4 @@
-import { ColFlexedCenter } from "../../styled/Common/Common";
+import { ColCentered, ColFlexedCenter } from "../../styled/Common/Common";
 import { useAppContext } from "../hooks/useAppContext";
 import { ProjectCard } from "../ProjectCard";
 
@@ -7,7 +7,9 @@ export const PortfolioPage = () => {
 
   return (
     <>
-      <h1>Portfolio</h1>
+      <ColCentered>
+        <h1>Portfolio</h1>
+      </ColCentered>
 
       <ColFlexedCenter>
         {projects.length > 0 ? (
