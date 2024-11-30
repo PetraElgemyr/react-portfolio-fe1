@@ -17,7 +17,7 @@ export const PortfolioPage = () => {
             <ProjectCard key={p.id} project={p}></ProjectCard>
           ))
         ) : (
-          <></>
+          <article>Projects comming soon!</article>
         )}
       </ColFlexedCenter>
     </>
