@@ -13,6 +13,7 @@ export const ProjectContainer = styled.section`
 
   @media screen and (${devices.laptop}) {
     width: 45%;
+    box-shadow: 0 6px 15px #ffffff42;
   }
 
   @media screen and (${devices.laptopL}) {
