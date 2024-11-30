@@ -19,7 +19,7 @@ export const ProjectImageContainer = styled.div`
 
 export const ProjectImage = styled.img`
   width: 100%;
-  height: 240px;
+  min-height: 200px;
   object-fit: cover;
   object-position: center;
   border-radius: 5px 5px 0 0;
@@ -27,10 +27,6 @@ export const ProjectImage = styled.img`
   padding: 0;
 
   @media screen and (${devices.tablet}) {
-    height: 270px;
-  }
-
-  @media screen and (${devices.tablet}) {
-    height: 300px;
+    min-height: unset;
   }
 `;
