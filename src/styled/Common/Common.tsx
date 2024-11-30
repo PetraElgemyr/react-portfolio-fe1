@@ -9,6 +9,7 @@ export const Row = styled.div`
 export const RowCentered = styled(Row)`
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const Col = styled.div`

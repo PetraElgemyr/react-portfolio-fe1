@@ -11,6 +11,7 @@ import {
 } from "../styled/Portfolio/ProjectText";
 import { IProject } from "./interfaces/IProject";
 import { StyledLink } from "../styled/Common/StyledLink";
+import { SkillBubble, SkillsContainer } from "../styled/Portfolio/SkillBubble";
 
 export interface IProjectCardProps {
   project: IProject;
@@ -37,7 +38,19 @@ export const ProjectCard = ({ project }: IProjectCardProps) => {
                 Try it
               </StyledLink>
             ) : null}
+
+            {/* todo sätt in skills bubblor */}
           </ProjectCardTextCenterContainer>
+
+          <SkillsContainer>
+            {project.techniques.length > 0 ? (
+              project.techniques.map((t, index) => (
+                <SkillBubble key={index}>{t}</SkillBubble>
+              ))
+            ) : (
+              <></>
+            )}
+          </SkillsContainer>
         </ProjectContainer>
       ) : (
         <></>
