@@ -55,3 +55,22 @@ export const ColFlexedCenter = styled(ColCentered)`
     gap: 95px;
   }
 `;
+
+export const PageMarginTop = styled.div`
+  margin-top: 0;
+
+  @media screen and (${devices.tablet}) {
+    margin-top: 10%;
+  }
+
+  @media screen and (${devices.laptop}) {
+    margin-top: 8%;
+  }
+
+  @media screen and (${devices.laptopL}) {
+    margin-top: 6%;
+  }
+  @media screen and (${devices.fourK}) {
+    margin-top: 5%;
+  }
+`;
