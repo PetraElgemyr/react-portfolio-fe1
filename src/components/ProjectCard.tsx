@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ProjectContainer } from "../styled/Portfolio/ProjectContainer";
 import {
   ProjectImage,
@@ -6,10 +5,12 @@ import {
 } from "../styled/Portfolio/ProjectImageContainer";
 import {
   ProjectCardText,
+  ProjectCardTextCenterContainer,
   ProjectCardTextContainer,
   ProjectCardTitle,
 } from "../styled/Portfolio/ProjectText";
 import { IProject } from "./interfaces/IProject";
+import { StyledLink } from "../styled/Common/StyledLink";
 
 export interface IProjectCardProps {
   project: IProject;
@@ -26,19 +27,17 @@ export const ProjectCard = ({ project }: IProjectCardProps) => {
           <ProjectCardTitle>{project.name}</ProjectCardTitle>
           <ProjectCardTextContainer>
             <ProjectCardText>{project.description}</ProjectCardText>
-            <ProjectCardText>
-              <Link target="_blank" to={project.github}>
-                Github
-              </Link>
-            </ProjectCardText>
-            {project.liveLink ? (
-              <ProjectCardText>
-                <Link target="_blank" to={project.liveLink}>
-                  Try it
-                </Link>
-              </ProjectCardText>
-            ) : null}
           </ProjectCardTextContainer>
+          <ProjectCardTextCenterContainer>
+            <StyledLink target="_blank" href={project.github}>
+              Github
+            </StyledLink>
+            {project.liveLink ? (
+              <StyledLink target="_blank" href={project.liveLink}>
+                Try it
+              </StyledLink>
+            ) : null}
+          </ProjectCardTextCenterContainer>
         </ProjectContainer>
       ) : (
         <></>
