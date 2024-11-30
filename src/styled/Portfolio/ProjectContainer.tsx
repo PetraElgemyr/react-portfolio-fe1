@@ -8,6 +8,7 @@ export const ProjectContainer = styled.section`
 
   @media screen and (${devices.tablet}) {
     width: 75%;
+    border-radius: 10px 10px 0 0;
   }
 
   @media screen and (${devices.laptop}) {
@@ -15,6 +16,7 @@ export const ProjectContainer = styled.section`
   }
 
   @media screen and (${devices.laptopL}) {
+    border-radius: 15px 15px 0 0;
   }
 
   @media screen and (${devices.fourK}) {
