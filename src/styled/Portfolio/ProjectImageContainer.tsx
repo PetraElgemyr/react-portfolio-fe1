@@ -16,7 +16,7 @@ export const ProjectImageContainer = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const ProjectImage = styled.img`
   width: 100%;
   height: 240px;
   object-fit: cover;

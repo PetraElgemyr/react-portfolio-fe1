@@ -1,28 +1,22 @@
 import { ColFlexedCenter } from "../../styled/Common/Common";
-import { ProjectCard } from "../../styled/Portfolio/ProjectCard";
-import {
-  Image,
-  ProjectImageContainer,
-} from "../../styled/Portfolio/ProjectImageContainer";
+import { useAppContext } from "../hooks/useAppContext";
+import { ProjectCard } from "../ProjectCard";
 
 export const PortfolioPage = () => {
+  const { projects } = useAppContext();
+
   return (
     <>
       <h1>Portfolio</h1>
 
       <ColFlexedCenter>
-        <ProjectCard>
-          <ProjectImageContainer>
-            Projekt placeholder
-            <Image
-            // src={`https:${dog.img[0].fields.file.url}`}
-            // alt={project.name}
-            ></Image>
-          </ProjectImageContainer>
-        </ProjectCard>
-        <ProjectCard>Projekt placeholder</ProjectCard>
-        <ProjectCard>Projekt placeholder</ProjectCard>
-        <ProjectCard>Projekt placeholder</ProjectCard>
+        {projects.length > 0 ? (
+          projects.map((p) => (
+            <ProjectCard key={p.id} project={p}></ProjectCard>
+          ))
+        ) : (
+          <></>
+        )}
       </ColFlexedCenter>
     </>
   );

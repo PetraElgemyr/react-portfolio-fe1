@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../Variables/Devices";
 
-export const ProjectCard = styled.section`
+export const ProjectContainer = styled.section`
   border: 1px solid white;
   width: 100%;
   height: 200px;
