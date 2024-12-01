@@ -57,7 +57,7 @@ export const ColFlexedCenter = styled(ColCentered)`
 `;
 
 export const PageMarginTop = styled.div`
-  margin-top: 0;
+  margin-top: 5%;
 
   @media screen and (${devices.tablet}) {
     margin-top: 10%;
