@@ -14,7 +14,7 @@ export const SkillsPage = () => {
         </ColCentered>
         <ColFlexedCenter>
           <SkillContainer></SkillContainer>
-        </ColFlexedCenter>{" "}
+        </ColFlexedCenter>
       </PageMarginTop>
     </>
   );

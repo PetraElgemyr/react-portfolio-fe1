@@ -11,6 +11,10 @@ export const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <div className="hamburger" onClick={toggleMenu}>
@@ -19,27 +23,35 @@ export const Navbar = () => {
       <nav className={`navbar${menuOpen ? "-open" : ""}`}>
         <ul>
           <li className="nav-item">
-            <Link to={LinkUrls.HOME} className="nav-link">
+            <Link to={LinkUrls.HOME} onClick={closeMenu} className="nav-link">
               {Pages.HOME}
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={LinkUrls.ABOUT} className="nav-link">
+            <Link to={LinkUrls.ABOUT} onClick={closeMenu} className="nav-link">
               {Pages.ABOUT}
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={LinkUrls.SKILLS} className="nav-link">
+            <Link to={LinkUrls.SKILLS} onClick={closeMenu} className="nav-link">
               {Pages.SKILLS}
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={LinkUrls.PORTFOLIO} className="nav-link">
+            <Link
+              to={LinkUrls.PORTFOLIO}
+              onClick={closeMenu}
+              className="nav-link"
+            >
               {Pages.PORTFOLIO}
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={LinkUrls.CONTACT} className="nav-link">
+            <Link
+              to={LinkUrls.CONTACT}
+              onClick={closeMenu}
+              className="nav-link"
+            >
               {Pages.CONTACT}
             </Link>
           </li>
