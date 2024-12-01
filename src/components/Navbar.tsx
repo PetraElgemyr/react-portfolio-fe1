@@ -10,8 +10,6 @@ export const Navbar = () => {
   const hamburgerRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
-    console.log(menuOpen, "sätter till ", !menuOpen);
-
     setMenuOpen(!menuOpen);
   };
 
