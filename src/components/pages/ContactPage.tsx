@@ -1,7 +1,11 @@
+import { PageMarginTop } from "../../styled/Common/Common";
+
 export const ContactPage = () => {
   return (
     <>
-      <h1>Contact page</h1>
+      <PageMarginTop>
+        <h1>Contact page</h1>
+      </PageMarginTop>
     </>
   );
 };
