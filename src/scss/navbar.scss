@@ -4,7 +4,7 @@
 
 .navbar {
   display: none;
-  background-color: rgba(0, 0, 0, 0.40);
+  background-color: v.$primary-blue-half-opacity;
   padding: 10px;
   z-index: 2000;
   color: white;
@@ -58,7 +58,8 @@ nav.navbar-open{
   top: 0;
 
   ul {
-    background-color: v.$primary-blue;
+    // background-color: v.$primary-blue;
+    background-color: v.$primary-blue-half-opacity;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
