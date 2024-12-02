@@ -20,7 +20,7 @@
 
   ul {
     list-style: none;
-    padding: 0;
+    padding: 0.5%;
     margin: 0;
     display: flex;
     width: 100%;
@@ -42,8 +42,31 @@
       .nav-link {
         text-decoration: none;
         color: white;
-        font-size: 18px;
+        font-size: 1.2rem;
         text-align: center;
+
+        &:hover {
+          color: v.$primary-orange;
+          font-weight: bold ;
+        }
+
+        @media (min-width: v.$tablet) {
+          font-size: 1.3rem;
+          // margin-top: 15px;
+        }
+      
+        @media (min-width: v.$laptop) {
+          font-size: 1.4rem;
+          // margin-top: 15px;
+        }
+      
+        @media (min-width: v.$laptopL) {
+          font-size: 1.55rem;
+        }
+      
+        @media (min-width: v.$fourK) {
+          font-size: 1.7rem;
+        }
       }
     }
   }
@@ -58,7 +81,6 @@ nav.navbar-open{
   top: 0;
 
   ul {
-    // background-color: v.$primary-blue;
     background-color: v.$primary-blue-half-opacity;
     flex-direction: column;
     text-align: center;
@@ -73,30 +95,14 @@ nav.navbar-open{
         text-decoration: none;
         color: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0);
-        transition: border 0.2s;
+        // transition: border 0.2s;
         font-size: 1rem;
         margin-top: 10px;
       
         &:hover {
-          border-color: white;
-        }
-      
-        @media (min-width: v.$tablet) {
-          font-size: 1.1rem;
-          margin-top: 15px;
-        }
-      
-        @media (min-width: v.$laptop) {
-          font-size: 1.2rem;
-          margin-top: 18px;
-        }
-      
-        @media (min-width: v.$laptopL) {
-          font-size: 1.3rem;
-        }
-      
-        @media (min-width: v.$fourK) {
-          font-size: 1.4rem;
+          // border-color: white;
+          color: v.$primary-orange;
+          font-weight: bold ;
         }
       }
     }
@@ -120,6 +126,13 @@ nav.navbar-open{
     font-size: 24px;
     color: white;
     overflow-y: hidden;
+
+      
+    &:hover {
+      // border-color: white;
+      color: v.$primary-orange;
+      font-size: 26px;
+    }
   }
 }
 
