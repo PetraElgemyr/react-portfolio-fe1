@@ -74,11 +74,13 @@ export const StyledLinkButton = styled(StyledLink)`
 
   @media screen and (${devices.tablet}) {
     padding: 3%;
+    border-radius: 15px;
   }
 
   @media screen and (${devices.laptop}) {
     font-size: 1.2rem;
     margin-top: 18px;
+    padding: 2%;
   }
 
   &:hover {
