@@ -1,13 +1,13 @@
-import {
-  ColCentered,
-  ColFlexedCenter,
-  PageMarginTop,
-} from "../../styled/Common/Common";
 import { StyledLinkButton } from "../../styled/Common/StyledLink";
-import { useMemo } from "react";
+import { Suspense, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { FloatingSkillBubble } from "../FloatingSkillBubble";
+import {
+  DownloadCvButtonContainer,
+  SkillPageTitle,
+} from "../../styled/Skills/SkillContainer";
+import "../../scss/home.scss";
 
 export const SkillsPage = () => {
   const skills = useMemo(
@@ -80,13 +80,29 @@ export const SkillsPage = () => {
 
   return (
     <>
-      <PageMarginTop>
-        <ColCentered>
+      {/* <PageMarginTop>
+        <SkillPageTitle>
           <h1>Skills page</h1>
-        </ColCentered>
-        <div style={{ width: "100vw", height: "100vh", margin: 0 }}>
-          <Canvas camera={{ position: [0, 0, 18], fov: 75 }}>
-            <OrbitControls enableZoom={true} zoomSpeed={1.5} />
+        </SkillPageTitle>
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            margin: 0,
+            zIndex: 0,
+            position: "absolute",
+            top: 0,
+          }}
+        >
+          <Canvas
+            style={{ zIndex: 0 }}
+            camera={{ position: [0, 0, 20], fov: 80 }}
+          >
+            <OrbitControls
+              enableZoom={false}
+              zoomSpeed={1.5}
+              enablePan={false}
+            />
             <ambientLight intensity={0.3} />
             <pointLight position={[10, 10, 10]} />
             {skills.map((skill, i) => (
@@ -98,15 +114,42 @@ export const SkillsPage = () => {
             ))}
           </Canvas>
         </div>
-        <ColFlexedCenter>
+        <DownloadCvButtonContainer>
           <StyledLinkButton
             href="./public/PetraElgemyrCv.pdf"
             download={"PetraElgemyrCv.pdf"}
           >
             Click here to download my resume/CV
           </StyledLinkButton>
-        </ColFlexedCenter>
-      </PageMarginTop>
+        </DownloadCvButtonContainer>
+      </PageMarginTop> */}
+      <SkillPageTitle>
+        <h1>Skills page</h1>
+      </SkillPageTitle>
+      <div className="scene">
+        <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
+          <OrbitControls enableZoom={false} zoomSpeed={1.5} enablePan={false} />
+          <Suspense fallback={"Loading"}>
+            <ambientLight intensity={0.3} />
+            <pointLight position={[10, 10, 10]} />
+            {skills.map((skill, i) => (
+              <FloatingSkillBubble
+                key={i}
+                position={positions[i]}
+                skill={skill}
+              />
+            ))}
+          </Suspense>
+        </Canvas>
+      </div>
+      <DownloadCvButtonContainer>
+        <StyledLinkButton
+          href="./public/PetraElgemyrCv.pdf"
+          download={"PetraElgemyrCv.pdf"}
+        >
+          Click here to download my resume/CV
+        </StyledLinkButton>
+      </DownloadCvButtonContainer>
     </>
   );
 };
