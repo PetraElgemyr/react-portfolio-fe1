@@ -18,3 +18,12 @@ export const SkillsContainer = styled(RowCentered)`
   width: 100%;
   padding: 2%;
 `;
+
+export const SkillPageBubble = styled(SkillBubble)`
+  border-radius: 50%;
+  padding: 7%;
+
+  @media screen and (${devices.tablet}) {
+    padding: 2.5%;
+  }
+`;
