@@ -8,7 +8,7 @@ export const ResponsiveFooter = styled.footer`
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 2001
+  z-index: 2001;
   bottom: 0;
 
   @media screen and (${devices.tablet}) {
