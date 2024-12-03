@@ -5,6 +5,7 @@ import { AboutPage } from "./components/pages/AboutPage";
 import { PortfolioPage } from "./components/pages/PortfolioPage";
 import { Navbar } from "./components/Navbar";
 import { SkillsPage } from "./components/pages/SkillsPage";
+import { Footer } from "./components/Footer";
 
 export const Routing = () => {
   return (
@@ -17,6 +18,7 @@ export const Routing = () => {
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/skills" element={<SkillsPage />} />
       </Routes>
+      <Footer></Footer>
     </Router>
   );
 };
