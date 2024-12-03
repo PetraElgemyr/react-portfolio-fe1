@@ -65,3 +65,18 @@ export const FooterText = styled.p`
     font-size: 1.4rem;
   }
 `;
+
+export const StyledLinkButton = styled(StyledLink)`
+  border: 1px solid white;
+  padding: 4%;
+  border-radius: 10px;
+
+  @media screen and (${devices.tablet}) {
+    padding: 3%;
+  }
+
+  @media screen and (${devices.laptop}) {
+    font-size: 1.2rem;
+    margin-top: 18px;
+  }
+`;
