@@ -1,11 +1,33 @@
+// import { useState } from "react";
 import {
   ColCentered,
   ColFlexedCenter,
   PageMarginTop,
 } from "../../styled/Common/Common";
 import { SkillContainer } from "../../styled/Skills/SkillContainer";
+import {
+  // SkillBubble,
+  SkillPageBubble,
+} from "../../styled/Portfolio/SkillBubble";
 
 export const SkillsPage = () => {
+  const skills: string[] = [
+    "TypeScript",
+    "JavaScript",
+    "Html5",
+    "CSS",
+    "SCSS",
+    "REACT",
+    "C#",
+    ".NET",
+    "MAUI",
+    "WPF",
+    "MongoDb",
+    "SQLite",
+    "GraphQL",
+    "Mui",
+  ];
+
   return (
     <>
       <PageMarginTop>
@@ -13,7 +35,11 @@ export const SkillsPage = () => {
           <h1>Skills page</h1>
         </ColCentered>
         <ColFlexedCenter>
-          <SkillContainer></SkillContainer>
+          <SkillContainer>
+            {skills.map((s) => (
+              <SkillPageBubble>{s}</SkillPageBubble>
+            ))}
+          </SkillContainer>
         </ColFlexedCenter>
       </PageMarginTop>
     </>
