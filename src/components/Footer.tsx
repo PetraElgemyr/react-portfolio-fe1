@@ -1,3 +1,4 @@
+import { FooterText, StyledFooterLink } from "../styled/Common/StyledLink";
 import { FooterSection, ResponsiveFooter } from "../styled/ResponsiveFooter";
 
 export const Footer = () => {
@@ -5,12 +6,23 @@ export const Footer = () => {
     <>
       <ResponsiveFooter>
         <FooterSection>
-          <p>LinkedIn</p>
-          <p>Github</p>
+          <StyledFooterLink
+            target="_blank"
+            href="https://www.linkedin.com/in/petra-elgemyr-a707b724b/"
+          >
+            LinkedIn
+          </StyledFooterLink>
+
+          <StyledFooterLink
+            target="_blank"
+            href="https://github.com/PetraElgemyr/"
+          >
+            Github
+          </StyledFooterLink>
         </FooterSection>
         <FooterSection>
-          <p>Email</p>
-          <p>Location: Stockholm, Sweden</p>
+          <FooterText>Email: Petra.elgemyr@gmail.com</FooterText>
+          <FooterText>Location: Stockholm, Sweden</FooterText>
         </FooterSection>
       </ResponsiveFooter>
     </>
