@@ -1,14 +1,10 @@
-// import { useState } from "react";
 import {
   ColCentered,
   ColFlexedCenter,
   PageMarginTop,
 } from "../../styled/Common/Common";
 import { SkillContainer } from "../../styled/Skills/SkillContainer";
-import {
-  // SkillBubble,
-  SkillPageBubble,
-} from "../../styled/Portfolio/SkillBubble";
+import { SkillPageBubble } from "../../styled/Portfolio/SkillBubble";
 
 export const SkillsPage = () => {
   const skills: string[] = [
