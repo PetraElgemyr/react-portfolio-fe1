@@ -1,4 +1,8 @@
-import { AboutImage, AboutImageContainer } from "../../styled/About/AboutImage";
+import {
+  AboutImage,
+  AboutImageContainer,
+  AboutTextContainer,
+} from "../../styled/About/AboutImage";
 import { ColCentered, PageMarginTop } from "../../styled/Common/Common";
 
 export const AboutPage = () => {
@@ -10,6 +14,11 @@ export const AboutPage = () => {
           <AboutImageContainer>
             <AboutImage src="/IMG_6208.jpg" alt="Petra Elgemyr" />
           </AboutImageContainer>
+
+          <AboutTextContainer>
+            <span>Hejhej</span>
+            <p>Info här</p>
+          </AboutTextContainer>
         </ColCentered>
       </PageMarginTop>
     </>

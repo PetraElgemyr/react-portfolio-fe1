@@ -12,3 +12,10 @@ export const AboutImage = styled.img`
   border-radius: 10px;
   box-shadow: 0 5px 15px 2px #ffffff42;
 `;
+
+export const AboutTextContainer = styled.article`
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 80%;
+  border-radius: 10px;
+  padding: 5%;
+`;
