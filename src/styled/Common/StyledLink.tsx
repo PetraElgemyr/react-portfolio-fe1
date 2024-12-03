@@ -70,6 +70,7 @@ export const StyledLinkButton = styled(StyledLink)`
   border: 1px solid white;
   padding: 4%;
   border-radius: 10px;
+  box-shadow: 0 6px 15px #ffffff42;
 
   @media screen and (${devices.tablet}) {
     padding: 3%;
@@ -78,5 +79,10 @@ export const StyledLinkButton = styled(StyledLink)`
   @media screen and (${devices.laptop}) {
     font-size: 1.2rem;
     margin-top: 18px;
+  }
+
+  &:hover {
+    box-shadow: 0 10px 20px #ffffff42;
+    color: ${colors.primary_orange};
   }
 `;
