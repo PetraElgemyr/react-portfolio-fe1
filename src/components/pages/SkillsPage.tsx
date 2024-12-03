@@ -5,15 +5,17 @@ import {
 } from "../../styled/Common/Common";
 import { SkillContainer } from "../../styled/Skills/SkillContainer";
 import { SkillPageBubble } from "../../styled/Portfolio/SkillBubble";
+import { StyledLinkButton } from "../../styled/Common/StyledLink";
 
 export const SkillsPage = () => {
   const skills: string[] = [
     "TypeScript",
     "JavaScript",
     "Html5",
+    "NodeJs",
     "CSS",
     "SCSS",
-    "REACT",
+    "ReactJs",
     "C#",
     ".NET",
     "MAUI",
@@ -21,7 +23,7 @@ export const SkillsPage = () => {
     "MongoDb",
     "SQLite",
     "GraphQL",
-    "Mui",
+    // "Mui",
   ];
 
   return (
@@ -32,10 +34,16 @@ export const SkillsPage = () => {
         </ColCentered>
         <ColFlexedCenter>
           <SkillContainer>
-            {skills.map((s) => (
-              <SkillPageBubble>{s}</SkillPageBubble>
+            {skills.map((s, i) => (
+              <SkillPageBubble key={i}>{s}</SkillPageBubble>
             ))}
           </SkillContainer>
+          <StyledLinkButton
+            href="./public/PetraElgemyrCv.pdf"
+            download={"PetraElgemyrCv.pdf"}
+          >
+            Click here to download my resume/CV
+          </StyledLinkButton>
         </ColFlexedCenter>
       </PageMarginTop>
     </>
