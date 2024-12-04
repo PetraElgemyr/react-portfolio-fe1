@@ -15,6 +15,7 @@ export const CodeBoxWrapper = styled.article`
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 6% 2% 6% 2%;
+  box-shadow: 0 0px 20px 1px #ffffff42;
 
   @media screen and (${devices.tablet}) {
     width: 60%;
