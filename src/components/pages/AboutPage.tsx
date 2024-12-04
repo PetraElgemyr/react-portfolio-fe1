@@ -4,12 +4,13 @@ import {
   AboutMeImgDescriptionWrapper,
   AboutTextContainer,
 } from "../../styled/About/AboutImage";
-import { CodeBoxWrapper, CodeBox } from "../../styled/About/CodeBox";
 import {
   ColCentered,
   ColFlexedCenter,
   PageMarginTop,
 } from "../../styled/Common/Common";
+import "../../scss/about.scss";
+import { AboutMeCodeBox } from "../AboutMeCodeBox";
 
 export const AboutPage = () => {
   return (
@@ -33,9 +34,7 @@ export const AboutPage = () => {
                 </p>
               </AboutTextContainer>
             </AboutMeImgDescriptionWrapper>
-            <CodeBoxWrapper>
-              <CodeBox>{/* Sätt in gammal javascript och html här */}</CodeBox>
-            </CodeBoxWrapper>
+            <AboutMeCodeBox />
           </ColFlexedCenter>
         </ColCentered>
       </PageMarginTop>

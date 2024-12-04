@@ -2,33 +2,31 @@ import styled from "styled-components";
 import { devices } from "../Variables/Devices";
 
 export const CodeBox = styled.article`
-  width: 90%;
-  border-radius: 10px;
-  padding: 6%;
+  width: 100%%;
+  padding: 2%;
 
   @media screen and (${devices.tablet}) {
-    width: 75%;
     padding: 5%;
-  }
-
-  @media screen and (${devices.laptop}) {
-    width: 50%;
-  }
-
-  @media screen and (${devices.laptop}) {
-    width: 50%;
   }
 `;
 
-export const CodeBoxWrapper = styled(CodeBox)`
-  background-color: rgba(0, 0, 0, 0.6);
+export const CodeBoxWrapper = styled.article`
   width: 90%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 6% 2% 6% 2%;
+
+  @media screen and (${devices.tablet}) {
+    width: 50%;
+    padding: 2%;
+  }
 
   @media screen and (${devices.laptop}) {
-    width: 50%;
+    width: 45%;
+    padding: 1%;
   }
 
   @media screen and (${devices.laptopL}) {
-    width: 45%;
+    width: 40%;
   }
 `;
