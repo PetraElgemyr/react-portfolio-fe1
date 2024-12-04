@@ -6,10 +6,10 @@ export const AboutImageContainer = styled.div`
   width: 70%;
   border-radius: 10px;
   box-shadow: 0 0px 25px 1px #ffffff42;
+  margin: 25px 0 25px 0;
 
   @media screen and (${devices.tablet}) {
     width: 38%;
-    margin-bottom: 2%;
   }
 
   @media screen and (${devices.laptop}) {
