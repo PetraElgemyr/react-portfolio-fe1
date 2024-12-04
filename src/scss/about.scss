@@ -1,0 +1,43 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.about {
+    color: rgba(212, 146, 120, 0.859);
+    border-radius: 20px;
+    font-size: 10pt;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p.-indent {
+        text-indent: 10%;
+        width: 100%;
+        margin: 0;
+        padding: 3%;
+
+        @media (min-width: v.$tablet) {
+            text-indent: 8%;
+        }
+
+        @media (min-width: v.$laptop) {
+            padding: 2.5%;
+            text-indent: 6%;
+        }
+    }
+
+    .orange {
+        color: rgba(238, 196, 119, 0.904);
+    }
+
+    .white {
+        color: white;
+    }
+
+    .blue {
+        color: rgba(173, 221, 253, 0.947);
+    }
+
+    .green {
+        color: rgba(209, 243, 194, 0.897);
+    }
+}
