@@ -9,11 +9,15 @@
     flex-direction: column;
     align-items: flex-start;
 
-    p.-indent {
+    p {
         text-indent: 10%;
         width: 100%;
         margin: 0;
         padding: 3%;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
 
         @media (min-width: v.$tablet) {
             text-indent: 8%;
@@ -26,6 +30,7 @@
     }
 
     .orange {
+        width: 55%;
         color: rgba(238, 196, 119, 0.904);
     }
 
@@ -35,9 +40,81 @@
 
     .blue {
         color: rgba(173, 221, 253, 0.947);
+        text-indent: 20px;
+        width: 55%;
+        text-wrap: nowrap;
+        text-align: start;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: v.$tablet) {
+            text-indent: 30px;
+        }
     }
 
     .green {
         color: rgba(209, 243, 194, 0.897);
+        margin: 0;
+        padding: 0;
+        text-align: start;
     }
 }
+
+.default {
+    width: 80%;
+    text-align: start;
+}
+
+.unset-width {
+    width: unset;
+}
+
+.caret {
+    width: auto;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #dadada;
+    animation: blink-caret 1s step-end infinite;
+
+    @media (min-width: v.$tablet) {
+        font-size: 1.2rem;
+    }
+
+    @media (min-width: v.$laptop) {
+        font-size: 1.3rem;
+    }
+}
+
+
+@keyframes blink-caret {
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+span {
+    font-size: 1rem;
+
+
+    @media (min-width: v.$tablet) {
+        font-size: 1.2rem;
+    }
+
+    @media (min-width: v.$laptop) {
+        font-size: 1.3rem;
+    }
+
+    @media (min-width: v.$laptopL) {
+        font-size: 1.4rem;
+    }
+
+    @media (min-width: v.$fourK) {
+        font-size: 1.7rem;
+    }
+}
+
