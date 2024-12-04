@@ -17,7 +17,7 @@ export const CodeBoxWrapper = styled.article`
   padding: 6% 2% 6% 2%;
 
   @media screen and (${devices.tablet}) {
-    width: 50%;
+    width: 60%;
     padding: 2%;
   }
 
