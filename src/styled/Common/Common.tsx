@@ -35,7 +35,6 @@ export const ColCenteredResponsive = styled(ColCentered)`
 
 export const ColFlexedCenter = styled(ColCentered)`
   flex-wrap: wrap;
-  align-items: center;
   width: 100%;
   padding: 6%;
   gap: 30px;
