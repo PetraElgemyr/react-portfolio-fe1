@@ -2,20 +2,27 @@ import { Link } from "react-router-dom";
 import { Pages } from "./enums/Pages";
 import { LinkUrls } from "./enums/LinkUrls";
 import "../scss/navbar.scss";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useAppContext } from "./hooks/useAppContext";
+import { OrangeLiBox } from "./OrangeLiBox";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLDivElement>(null);
+  const { setActivePage, activePage } = useAppContext();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const closeMenu = useCallback(
+    (activePage: Pages) => {
+      setMenuOpen(false);
+      setActivePage(activePage);
+    },
+    [setActivePage]
+  );
 
   useEffect(() => {
     const handleClickOutsideMenu = (e: MouseEvent) => {
@@ -25,7 +32,7 @@ export const Navbar = () => {
         hamburgerRef.current &&
         !hamburgerRef.current.contains(e.target as Node)
       ) {
-        closeMenu();
+        closeMenu(activePage);
       }
     };
 
@@ -34,7 +41,7 @@ export const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutsideMenu);
     };
-  }, []);
+  }, [activePage, setActivePage, closeMenu]);
 
   return (
     <>
@@ -43,39 +50,51 @@ export const Navbar = () => {
       </div>
       <nav ref={menuRef} className={`navbar${menuOpen ? "-open" : ""}`}>
         <ul>
-          <li className="nav-item">
-            <Link to={LinkUrls.HOME} onClick={closeMenu} className="nav-link">
+          <OrangeLiBox isActivePage={activePage === Pages.HOME && true}>
+            <Link
+              to={LinkUrls.HOME}
+              onClick={() => closeMenu(Pages.HOME)}
+              className="nav-link"
+            >
               {Pages.HOME}
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link to={LinkUrls.ABOUT} onClick={closeMenu} className="nav-link">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.ABOUT && true}>
+            <Link
+              to={LinkUrls.ABOUT}
+              onClick={() => closeMenu(Pages.ABOUT)}
+              className="nav-link"
+            >
               {Pages.ABOUT}
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link to={LinkUrls.SKILLS} onClick={closeMenu} className="nav-link">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.SKILLS && true}>
+            <Link
+              to={LinkUrls.SKILLS}
+              onClick={() => closeMenu(Pages.SKILLS)}
+              className="nav-link"
+            >
               {Pages.SKILLS}
             </Link>
-          </li>
-          <li className="nav-item">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.PORTFOLIO && true}>
             <Link
               to={LinkUrls.PORTFOLIO}
-              onClick={closeMenu}
+              onClick={() => closeMenu(Pages.PORTFOLIO)}
               className="nav-link"
             >
               {Pages.PORTFOLIO}
             </Link>
-          </li>
-          <li className="nav-item">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.CONTACT && true}>
             <Link
               to={LinkUrls.CONTACT}
-              onClick={closeMenu}
+              onClick={() => closeMenu(Pages.CONTACT)}
               className="nav-link"
             >
               {Pages.CONTACT}
             </Link>
-          </li>
+          </OrangeLiBox>
         </ul>
       </nav>
     </>

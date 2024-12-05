@@ -8,8 +8,10 @@ import {
   SkillPageTitle,
 } from "../../styled/Skills/SkillContainer";
 import "../../scss/home.scss";
+import { Footer } from "../Footer";
+import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
 
-export const SkillsPage = () => {
+export const SkillsPage = ({ isFixed }: IIsFixedNavbarProps) => {
   const skills = useMemo(
     () => [
       "TypeScript",
@@ -150,6 +152,7 @@ export const SkillsPage = () => {
           Click here to download my resume/CV
         </StyledLinkButton>
       </DownloadCvButtonContainer>
+      <Footer isFixed={isFixed}></Footer>
     </>
   );
 };

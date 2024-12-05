@@ -29,23 +29,6 @@
     color: white;
     gap: 3%;
 
-    li.nav-item {
-      padding: 10px;
-      text-decoration: none;
-      color: white;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin: 0;
-
-     &:hover {
-          background-color: v.$primary-orange;
-          border-radius: 5px;
-        }
-
       .nav-link {
         text-decoration: none;
         color: white;
@@ -67,7 +50,6 @@
         @media (min-width: v.$fourK) {
           font-size: 1.7rem;
         }
-      }
     }
   }
 }
@@ -103,7 +85,7 @@ nav.navbar-open {
         color: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0);
         font-size: 1rem;
-        margin-top: 10px;
+        margin: 5px;
 
         &:hover {
           font-weight: bold;

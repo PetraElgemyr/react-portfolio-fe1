@@ -6,8 +6,10 @@ import { ProjectCardText } from "../../styled/Portfolio/ProjectText";
 import { ContactForm } from "../ContactForm";
 import { FormEvent, useState } from "react";
 import { defaultFormData, IFormData } from "../interfaces/IFormData";
+import { Footer } from "../Footer";
+import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
 
-export const ContactPage = () => {
+export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
   const [formSentSuccessfully, setFormSentSuccessfully] =
     useState<boolean>(false);
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
@@ -92,6 +94,8 @@ export const ContactPage = () => {
           )}
         </ColCentered>
       </PageMarginTop>
+
+      <Footer isFixed={isFixed}></Footer>
     </>
   );
 };

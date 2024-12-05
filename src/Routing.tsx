@@ -5,20 +5,30 @@ import { AboutPage } from "./components/pages/AboutPage";
 import { PortfolioPage } from "./components/pages/PortfolioPage";
 import { Navbar } from "./components/Navbar";
 import { SkillsPage } from "./components/pages/SkillsPage";
-import { Footer } from "./components/Footer";
+import { useAppContext } from "./components/hooks/useAppContext";
+import { Pages } from "./components/enums/Pages";
 
 export const Routing = () => {
+  const { activePage } = useAppContext();
+
+  const isStartPage = activePage === Pages.HOME ? true : false;
+
   return (
     <Router basename="/">
       <Navbar></Navbar>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/" element={<HomePage isFixed={isStartPage} />} />
+        <Route
+          path="/contact"
+          element={<ContactPage isFixed={isStartPage} />}
+        />
+        <Route path="/about" element={<AboutPage isFixed={isStartPage} />} />
+        <Route
+          path="/portfolio"
+          element={<PortfolioPage isFixed={isStartPage} />}
+        />
+        <Route path="/skills" element={<SkillsPage isFixed={isStartPage} />} />
       </Routes>
-      <Footer></Footer>
     </Router>
   );
 };

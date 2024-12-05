@@ -1,10 +1,14 @@
 import { FooterText, StyledFooterLink } from "../styled/Common/StyledLink";
 import { FooterSection, ResponsiveFooter } from "../styled/ResponsiveFooter";
 
-export const Footer = () => {
+interface IFooterProps {
+  isFixed: boolean;
+}
+
+export const Footer = ({ isFixed }: IFooterProps) => {
   return (
     <>
-      <ResponsiveFooter>
+      <ResponsiveFooter isFixed={isFixed}>
         <FooterSection>
           <StyledFooterLink
             target="_blank"

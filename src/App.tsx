@@ -3,9 +3,11 @@ import "./App.css";
 import { AppContext } from "./components/contexts/AppContext";
 import { Routing } from "./Routing";
 import { IProject } from "./components/interfaces/IProject";
+import { Pages } from "./components/enums/Pages";
 
 function App() {
   const [projects, setProjects] = useState<IProject[]>([]);
+  const [activePage, setActivePage] = useState<Pages>(Pages.HOME);
 
   useEffect(() => {
     setProjects([
@@ -61,6 +63,8 @@ function App() {
   const contextValue = {
     projects,
     setProjects,
+    activePage,
+    setActivePage,
   };
 
   return (
