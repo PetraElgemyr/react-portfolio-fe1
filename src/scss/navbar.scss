@@ -102,13 +102,10 @@ nav.navbar-open {
         text-decoration: none;
         color: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0);
-        // transition: border 0.2s;
         font-size: 1rem;
         margin-top: 10px;
 
         &:hover {
-          // border-color: white;
-          // color: v.$primary-orange;
           font-weight: bold;
         }
       }
@@ -136,7 +133,6 @@ nav.navbar-open {
 
 
     &:hover {
-      // border-color: white;
       color: v.$primary-orange;
       font-size: 26px;
     }
