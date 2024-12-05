@@ -8,19 +8,20 @@
     align-items: center;
     width: 100%;
 
+    .title-laptop {
+        display: none;
+
+        @media (min-width: v.$laptop) {
+            display: inline;
+            margin: 0;
+        }
+    }
 
     @media (min-width: v.$laptop) {
         flex-direction: row;
         align-items: flex-start;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding: 5% 3% 5% 3%;
     }
-
-    @media (min-width: v.$laptop) {
-        padding: 3%;
-    }
-
-  
 
     section.contact-text-container {
         width: 100%;
@@ -50,8 +51,6 @@
         @media (min-width: v.$laptopL) {
             width: 40%;
         }
-      
-
     }
 
     section.contact-form-container {
@@ -66,7 +65,6 @@
             padding: 2%;
         }
 
-
         @media (min-width: v.$laptop) {
             margin: 0;
             padding: 0;
@@ -80,5 +78,11 @@
         @media (min-width: v.$fourK) {
             width: 50%;
         }
+    }
+}
+
+.title-mobile {
+    @media (min-width: v.$laptop) {
+        display: none;
     }
 }

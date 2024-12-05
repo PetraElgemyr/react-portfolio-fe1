@@ -11,6 +11,7 @@ import { ContactMeForm } from "../ContactMeForm";
 import { useLocation } from "react-router-dom";
 import { useAppContext } from "../hooks/useAppContext";
 import "../../scss/contactPage.scss";
+import { ContactTitleLaptop } from "../../styled/ContactTitleLaptop";
 
 export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
@@ -48,10 +49,14 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
     <>
       <PageMarginTop>
         <ColCentered>
-          <h1>Contact page</h1>
+          <h1 className="title-mobile">Contact page</h1>
 
           <div className="contact-container">
             <section className="contact-text-container">
+              <ContactTitleLaptop className="title-laptop">
+                <h1 className="title-laptop">Contact page</h1>
+              </ContactTitleLaptop>
+
               <CenteredArticle>
                 Hi there! If you want to contact me or just connect, you can
                 either email me or contact me on Linkedin. You can also use the
