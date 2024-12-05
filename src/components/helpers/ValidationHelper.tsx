@@ -1,8 +1,6 @@
 import { IFormData } from "../interfaces/IFormData";
 
 export const validateForm = (formData: IFormData) => {
-  console.log(formData);
-
   if (
     !formData.fromEmail ||
     formData.fromEmail.length < 4 ||

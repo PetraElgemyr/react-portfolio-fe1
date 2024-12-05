@@ -32,7 +32,7 @@ export const ContactMeForm = ({
         e.preventDefault();
         setFormSubmitted(true);
         const isValid = validateForm(formData);
-        console.log(isValid);
+
         if (isValid) {
           setIsValid(true);
           sendEmail(e);

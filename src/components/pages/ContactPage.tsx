@@ -25,7 +25,6 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
       .sendForm(serviceId, templateId, form, publicKey)
       .then(() => {
         clearForm();
-        console.log("meddelande skickat");
       })
       .catch((error) => {
         console.error("EmailJS error:", error);
