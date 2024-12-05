@@ -4,7 +4,7 @@
 
 .navbar {
   display: none;
-  background-color: v.$primary-blue-half-opacity;
+  background-color: transparent;
   padding: 10px;
   z-index: 2000;
   color: white;
@@ -27,6 +27,7 @@
     flex-direction: column;
     align-items: center;
     color: white;
+    gap: 3%;
 
     li.nav-item {
       padding: 10px;
@@ -38,6 +39,12 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      margin: 0;
+
+     &:hover {
+          background-color: v.$primary-orange;
+          border-radius: 5px;
+        }
 
       .nav-link {
         text-decoration: none;
@@ -45,25 +52,18 @@
         font-size: 1.2rem;
         text-align: center;
 
-        &:hover {
-          color: v.$primary-orange;
-          font-weight: bold ;
-        }
-
         @media (min-width: v.$tablet) {
           font-size: 1.3rem;
-          // margin-top: 15px;
         }
-      
+
         @media (min-width: v.$laptop) {
           font-size: 1.4rem;
-          // margin-top: 15px;
         }
-      
+
         @media (min-width: v.$laptopL) {
           font-size: 1.55rem;
         }
-      
+
         @media (min-width: v.$fourK) {
           font-size: 1.7rem;
         }
@@ -72,7 +72,7 @@
   }
 }
 
-nav.navbar-open{
+nav.navbar-open {
   width: 100%;
   text-align: center;
   text-decoration: none;
@@ -90,19 +90,23 @@ nav.navbar-open{
 
     li {
       margin: 10%;
+      padding: 2.5%;
 
-      a{
+
+      &:hover {
+        background-color: v.$primary-orange;
+        border-radius: 5px;
+      }
+
+      a {
         text-decoration: none;
         color: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0);
-        // transition: border 0.2s;
         font-size: 1rem;
         margin-top: 10px;
-      
+
         &:hover {
-          // border-color: white;
-          color: v.$primary-orange;
-          font-weight: bold ;
+          font-weight: bold;
         }
       }
     }
@@ -127,9 +131,7 @@ nav.navbar-open{
     color: white;
     overflow-y: hidden;
 
-      
     &:hover {
-      // border-color: white;
       color: v.$primary-orange;
       font-size: 26px;
     }
