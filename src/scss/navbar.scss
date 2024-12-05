@@ -4,7 +4,7 @@
 
 .navbar {
   display: none;
-  background-color: v.$primary-blue-half-opacity;
+  background-color: transparent;
   padding: 10px;
   z-index: 2000;
   color: white;
@@ -130,7 +130,6 @@ nav.navbar-open {
     font-size: 24px;
     color: white;
     overflow-y: hidden;
-
 
     &:hover {
       color: v.$primary-orange;
