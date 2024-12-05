@@ -7,38 +7,34 @@ import { FormEvent, useEffect, useState } from "react";
 import { defaultFormData, IFormData } from "../interfaces/IFormData";
 import { Footer } from "../Footer";
 import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
-// import { ContactMeForm } from "../ContactMeForm";
+import { ContactMeForm } from "../ContactMeForm";
 import { useLocation } from "react-router-dom";
 import { useAppContext } from "../hooks/useAppContext";
-import { ContactForm } from "../ContactForm";
 
 export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
-  const [formSentSuccessfully, setFormSentSuccessfully] =
-    useState<boolean>(false);
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
   const [formData, setFormData] = useState<IFormData>(defaultFormData);
-  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const serviceId = import.meta.env.VITE_SERVICE_ID;
   const templateId = import.meta.env.VITE_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
     const form = e.target as HTMLFormElement;
     emailjs
       .sendForm(serviceId, templateId, form, publicKey)
       .then(() => {
-        setFormSubmitted(true);
-        setFormSentSuccessfully(true);
-        setFormData(defaultFormData);
-        setErrorMessage("");
+        clearForm();
+        console.log("meddelande skickat");
       })
       .catch((error) => {
-        setFormSubmitted(true);
-        setFormSentSuccessfully(false);
         console.error("EmailJS error:", error);
       });
+  };
+
+  const clearForm = () => {
+    setFormData(defaultFormData);
+    setFormSubmitted(false);
   };
 
   const location = useLocation();
@@ -47,14 +43,6 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
   useEffect(() => {
     setActivePage(location.pathname);
   }, [location.pathname, setActivePage]);
-
-  const validateForm = () => {
-    if (formData.fromEmail && formData.fromName && formData.message) {
-      return true;
-    }
-
-    return false;
-  };
 
   return (
     <>
@@ -82,32 +70,16 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
             </StyledLink>
           </ProjectCardText>
 
-          {/* <ContactMeForm
+          <ContactMeForm
             formData={formData}
             setFormData={(data: IFormData) => setFormData(data)}
             formSubmitted={formSubmitted}
-          /> */}
-
-          <ContactForm
+            setFormSubmitted={(submitted: boolean) =>
+              setFormSubmitted(submitted)
+            }
             sendEmail={sendEmail}
-            formData={formData}
-            setFormData={(data) => {
-              setFormData(data);
-            }}
-            validateForm={validateForm}
-            setErrorMessage={(message: string) => setErrorMessage(message)}
+            clearForm={clearForm}
           />
-          {formSubmitted ? (
-            <CenteredArticle>
-              {formSentSuccessfully
-                ? "Message was successfully sent! I will get back as soon as possible."
-                : "Oops! Something went wrong, please try again"}
-            </CenteredArticle>
-          ) : (
-            <CenteredArticle>
-              {errorMessage.length > 1 ? errorMessage : null}
-            </CenteredArticle>
-          )}
         </ColCentered>
       </PageMarginTop>
 
