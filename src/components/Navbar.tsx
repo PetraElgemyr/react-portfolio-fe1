@@ -17,9 +17,9 @@ export const Navbar = () => {
   };
 
   const closeMenu = useCallback(
-    (activePage: Pages) => {
+    (activePagePath: string) => {
       setMenuOpen(false);
-      setActivePage(activePage);
+      setActivePage(activePagePath);
     },
     [setActivePage]
   );
@@ -50,46 +50,46 @@ export const Navbar = () => {
       </div>
       <nav ref={menuRef} className={`navbar${menuOpen ? "-open" : ""}`}>
         <ul>
-          <OrangeLiBox isActivePage={activePage === Pages.HOME && true}>
+          <OrangeLiBox isActivePage={activePage === LinkUrls.HOME && true}>
             <Link
               to={LinkUrls.HOME}
-              onClick={() => closeMenu(Pages.HOME)}
+              onClick={() => closeMenu(LinkUrls.HOME)}
               className="nav-link"
             >
               {Pages.HOME}
             </Link>
           </OrangeLiBox>
-          <OrangeLiBox isActivePage={activePage === Pages.ABOUT && true}>
+          <OrangeLiBox isActivePage={activePage === LinkUrls.ABOUT && true}>
             <Link
               to={LinkUrls.ABOUT}
-              onClick={() => closeMenu(Pages.ABOUT)}
+              onClick={() => closeMenu(LinkUrls.ABOUT)}
               className="nav-link"
             >
               {Pages.ABOUT}
             </Link>
           </OrangeLiBox>
-          <OrangeLiBox isActivePage={activePage === Pages.SKILLS && true}>
+          <OrangeLiBox isActivePage={activePage === LinkUrls.SKILLS && true}>
             <Link
               to={LinkUrls.SKILLS}
-              onClick={() => closeMenu(Pages.SKILLS)}
+              onClick={() => closeMenu(LinkUrls.SKILLS)}
               className="nav-link"
             >
               {Pages.SKILLS}
             </Link>
           </OrangeLiBox>
-          <OrangeLiBox isActivePage={activePage === Pages.PORTFOLIO && true}>
+          <OrangeLiBox isActivePage={activePage === LinkUrls.PORTFOLIO && true}>
             <Link
               to={LinkUrls.PORTFOLIO}
-              onClick={() => closeMenu(Pages.PORTFOLIO)}
+              onClick={() => closeMenu(LinkUrls.PORTFOLIO)}
               className="nav-link"
             >
               {Pages.PORTFOLIO}
             </Link>
           </OrangeLiBox>
-          <OrangeLiBox isActivePage={activePage === Pages.CONTACT && true}>
+          <OrangeLiBox isActivePage={activePage === LinkUrls.CONTACT && true}>
             <Link
               to={LinkUrls.CONTACT}
-              onClick={() => closeMenu(Pages.CONTACT)}
+              onClick={() => closeMenu(LinkUrls.CONTACT)}
               className="nav-link"
             >
               {Pages.CONTACT}

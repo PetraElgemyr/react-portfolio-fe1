@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   ColCentered,
   ColFlexedCenter,
@@ -7,9 +8,15 @@ import { Footer } from "../Footer";
 import { useAppContext } from "../hooks/useAppContext";
 import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
 import { ProjectCard } from "../ProjectCard";
+import { useLocation } from "react-router-dom";
 
 export const PortfolioPage = ({ isFixed }: IIsFixedNavbarProps) => {
-  const { projects } = useAppContext();
+  const location = useLocation();
+  const { setActivePage, projects } = useAppContext();
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location.pathname, setActivePage]);
 
   return (
     <>

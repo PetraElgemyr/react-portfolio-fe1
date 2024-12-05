@@ -6,12 +6,12 @@ import { PortfolioPage } from "./components/pages/PortfolioPage";
 import { Navbar } from "./components/Navbar";
 import { SkillsPage } from "./components/pages/SkillsPage";
 import { useAppContext } from "./components/hooks/useAppContext";
-import { Pages } from "./components/enums/Pages";
+import { LinkUrls } from "./components/enums/LinkUrls";
 
 export const Routing = () => {
   const { activePage } = useAppContext();
 
-  const isStartPage = activePage === Pages.HOME ? true : false;
+  const isStartPage = activePage === LinkUrls.HOME ? true : false;
 
   return (
     <Router basename="/">

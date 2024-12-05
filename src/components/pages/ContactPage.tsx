@@ -3,11 +3,14 @@ import { CenteredArticle } from "../../styled/CenteredArticle";
 import { ColCentered, PageMarginTop } from "../../styled/Common/Common";
 import { StyledLink } from "../../styled/Common/StyledLink";
 import { ProjectCardText } from "../../styled/Portfolio/ProjectText";
-import { ContactForm } from "../ContactForm";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { defaultFormData, IFormData } from "../interfaces/IFormData";
 import { Footer } from "../Footer";
 import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
+// import { ContactMeForm } from "../ContactMeForm";
+import { useLocation } from "react-router-dom";
+import { useAppContext } from "../hooks/useAppContext";
+import { ContactForm } from "../ContactForm";
 
 export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
   const [formSentSuccessfully, setFormSentSuccessfully] =
@@ -37,6 +40,13 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
         console.error("EmailJS error:", error);
       });
   };
+
+  const location = useLocation();
+  const { setActivePage } = useAppContext();
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location.pathname, setActivePage]);
 
   const validateForm = () => {
     if (formData.fromEmail && formData.fromName && formData.message) {
@@ -71,6 +81,12 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
               Petra.elgemyr@gmail.com
             </StyledLink>
           </ProjectCardText>
+
+          {/* <ContactMeForm
+            formData={formData}
+            setFormData={(data: IFormData) => setFormData(data)}
+            formSubmitted={formSubmitted}
+          /> */}
 
           <ContactForm
             sendEmail={sendEmail}

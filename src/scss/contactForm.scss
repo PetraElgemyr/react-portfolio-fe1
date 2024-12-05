@@ -1,14 +1,20 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+// .form-container
 .contact_form {
+    // margin-top: 10%;
+    // width:85%;
     width: 100%;
     padding: 8% 8% 2% 8%;
+    // border-radius: 4px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    // background-color: rgb(236, 232, 232);
 
     @media (min-width: v.$tablet) {
+        // width: 60%;
         width: 70%;
         padding: 3% 3% 1% 3%;
     }

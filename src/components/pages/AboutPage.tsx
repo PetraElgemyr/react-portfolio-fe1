@@ -13,8 +13,18 @@ import { AboutMeCodeBox } from "../AboutMeCodeBox";
 import { AboutText, AboutTextContainer } from "../../styled/About/AboutText";
 import { Footer } from "../Footer";
 import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useAppContext } from "../hooks/useAppContext";
 
 export const AboutPage = ({ isFixed }: IIsFixedNavbarProps) => {
+  const location = useLocation();
+  const { setActivePage } = useAppContext();
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location.pathname, setActivePage]);
+
   return (
     <>
       <PageMarginTop>
