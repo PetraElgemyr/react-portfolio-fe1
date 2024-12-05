@@ -4,6 +4,7 @@ import { LinkUrls } from "./enums/LinkUrls";
 import "../scss/navbar.scss";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useAppContext } from "./hooks/useAppContext";
+import { OrangeLiBox } from "./OrangeLiBox";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -22,10 +23,6 @@ export const Navbar = () => {
     },
     [setActivePage]
   );
-  // const closeMenu = (activePage: Pages) => {
-  //   setMenuOpen(false);
-  //   setActivePage(activePage);
-  // };
 
   useEffect(() => {
     const handleClickOutsideMenu = (e: MouseEvent) => {
@@ -53,7 +50,7 @@ export const Navbar = () => {
       </div>
       <nav ref={menuRef} className={`navbar${menuOpen ? "-open" : ""}`}>
         <ul>
-          <li className="nav-item">
+          <OrangeLiBox isActivePage={activePage === Pages.HOME && true}>
             <Link
               to={LinkUrls.HOME}
               onClick={() => closeMenu(Pages.HOME)}
@@ -61,8 +58,8 @@ export const Navbar = () => {
             >
               {Pages.HOME}
             </Link>
-          </li>
-          <li className="nav-item">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.ABOUT && true}>
             <Link
               to={LinkUrls.ABOUT}
               onClick={() => closeMenu(Pages.ABOUT)}
@@ -70,8 +67,8 @@ export const Navbar = () => {
             >
               {Pages.ABOUT}
             </Link>
-          </li>
-          <li className="nav-item">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.SKILLS && true}>
             <Link
               to={LinkUrls.SKILLS}
               onClick={() => closeMenu(Pages.SKILLS)}
@@ -79,8 +76,8 @@ export const Navbar = () => {
             >
               {Pages.SKILLS}
             </Link>
-          </li>
-          <li className="nav-item">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.PORTFOLIO && true}>
             <Link
               to={LinkUrls.PORTFOLIO}
               onClick={() => closeMenu(Pages.PORTFOLIO)}
@@ -88,8 +85,8 @@ export const Navbar = () => {
             >
               {Pages.PORTFOLIO}
             </Link>
-          </li>
-          <li className="nav-item">
+          </OrangeLiBox>
+          <OrangeLiBox isActivePage={activePage === Pages.CONTACT && true}>
             <Link
               to={LinkUrls.CONTACT}
               onClick={() => closeMenu(Pages.CONTACT)}
@@ -97,7 +94,7 @@ export const Navbar = () => {
             >
               {Pages.CONTACT}
             </Link>
-          </li>
+          </OrangeLiBox>
         </ul>
       </nav>
     </>
