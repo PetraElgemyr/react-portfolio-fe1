@@ -20,6 +20,7 @@ export const ResponsiveFooter = styled.footer<IResponsiveFooterProps>`
   @media screen and (${devices.tablet}) {
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
   }
 `;
 

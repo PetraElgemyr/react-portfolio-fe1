@@ -45,7 +45,12 @@ export const StyledFooterLink = styled(StyledLink)`
 export const FooterText = styled.p`
   color: white;
   font-size: 1rem;
-  margin-top: 10px;
+  margin: 4%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (${devices.tablet}) {
     font-size: 1.1rem;
@@ -87,4 +92,9 @@ export const StyledLinkButton = styled(StyledLink)`
     box-shadow: 0 10px 20px #ffffff42;
     color: ${colors.primary_orange};
   }
+`;
+
+export const FooterIcon = styled.i`
+  overflow: hidden;
+  width: 10%;
 `;
