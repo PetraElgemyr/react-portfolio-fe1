@@ -10,6 +10,7 @@ export const AboutImageContainer = styled.div`
 
   @media screen and (${devices.tablet}) {
     width: 38%;
+    margin: 0;
   }
 
   @media screen and (${devices.laptop}) {
