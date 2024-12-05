@@ -1,0 +1,88 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .title-laptop {
+        display: none;
+
+        @media (min-width: v.$laptop) {
+            display: inline;
+            margin: 0;
+        }
+    }
+
+    @media (min-width: v.$laptop) {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 5% 3% 5% 3%;
+    }
+
+    section.contact-text-container {
+        width: 100%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+
+
+        @media (min-width: v.$tablet) {
+            width: 70%;
+            padding: 2%;
+        }
+
+        @media (min-width: v.$laptop) {
+            margin: 0;
+            padding: 0;
+            width: 47%;
+        }
+
+        @media (min-width: v.$laptopL) {
+            margin: 50px 0 30px 0;
+        }
+
+        @media (min-width: v.$laptopL) {
+            width: 40%;
+        }
+    }
+
+    section.contact-form-container {
+        width: 100%;
+        padding: 0 5% 5% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: v.$tablet) {
+            padding: 2%;
+        }
+
+        @media (min-width: v.$laptop) {
+            margin: 0;
+            padding: 0;
+            width: 53%;
+        }
+
+        @media (min-width: v.$laptopL) {
+            width: 55%;
+        }
+
+        @media (min-width: v.$fourK) {
+            width: 50%;
+        }
+    }
+}
+
+.title-mobile {
+    @media (min-width: v.$laptop) {
+        display: none;
+    }
+}

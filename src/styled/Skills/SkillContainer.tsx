@@ -37,7 +37,6 @@ export const DownloadCvButtonContainer = styled(ColCentered)`
   @media screen and (${devices.laptop}) {
     flex-direction: row;
     gap: 60px;
-    // padding: 10% 4% 2% 4%;
     align-items: flex-start;
   }
 

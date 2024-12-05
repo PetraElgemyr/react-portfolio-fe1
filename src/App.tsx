@@ -3,11 +3,10 @@ import "./App.css";
 import { AppContext } from "./components/contexts/AppContext";
 import { Routing } from "./Routing";
 import { IProject } from "./components/interfaces/IProject";
-import { Pages } from "./components/enums/Pages";
 
 function App() {
   const [projects, setProjects] = useState<IProject[]>([]);
-  const [activePage, setActivePage] = useState<Pages>(Pages.HOME);
+  const [activePage, setActivePage] = useState<string>("");
 
   useEffect(() => {
     setProjects([

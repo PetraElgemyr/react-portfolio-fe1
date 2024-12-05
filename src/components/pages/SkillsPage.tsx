@@ -1,5 +1,5 @@
 import { StyledLinkButton } from "../../styled/Common/StyledLink";
-import { Suspense, useMemo } from "react";
+import { Suspense, useEffect, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { FloatingSkillBubble } from "../FloatingSkillBubble";
@@ -10,8 +10,17 @@ import {
 import "../../scss/home.scss";
 import { Footer } from "../Footer";
 import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
+import { useLocation } from "react-router-dom";
+import { useAppContext } from "../hooks/useAppContext";
 
 export const SkillsPage = ({ isFixed }: IIsFixedNavbarProps) => {
+  const location = useLocation();
+  const { setActivePage } = useAppContext();
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location.pathname, setActivePage]);
+
   const skills = useMemo(
     () => [
       "TypeScript",

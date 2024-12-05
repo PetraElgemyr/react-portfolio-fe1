@@ -1,12 +1,21 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { NameText } from "../NameText";
 import "../../scss/home.scss";
 import { Footer } from "../Footer";
 import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
+import { useLocation } from "react-router-dom";
+import { useAppContext } from "../hooks/useAppContext";
 
 export const HomePage = ({ isFixed }: IIsFixedNavbarProps) => {
+  const location = useLocation();
+  const { setActivePage } = useAppContext();
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location.pathname, setActivePage]);
+
   return (
     <>
       <div className="scene">

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { devices } from "./Variables/Devices";
 
-export const CenteredArticle = styled.article`
+export const ContactTitleLaptop = styled.h1`
   padding: 5% 8% 5% 8%;
 
   @media screen and (${devices.tablet}) {
