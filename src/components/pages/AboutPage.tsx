@@ -11,8 +11,10 @@ import {
 import "../../scss/about.scss";
 import { AboutMeCodeBox } from "../AboutMeCodeBox";
 import { AboutText, AboutTextContainer } from "../../styled/About/AboutText";
+import { Footer } from "../Footer";
+import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
 
-export const AboutPage = () => {
+export const AboutPage = ({ isFixed }: IIsFixedNavbarProps) => {
   return (
     <>
       <PageMarginTop>
@@ -38,6 +40,7 @@ export const AboutPage = () => {
           </ColFlexedCenter>
         </ColCentered>
       </PageMarginTop>
+      <Footer isFixed={isFixed}></Footer>
     </>
   );
 };

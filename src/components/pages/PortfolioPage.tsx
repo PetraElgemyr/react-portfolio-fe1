@@ -3,10 +3,12 @@ import {
   ColFlexedCenter,
   PageMarginTop,
 } from "../../styled/Common/Common";
+import { Footer } from "../Footer";
 import { useAppContext } from "../hooks/useAppContext";
+import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
 import { ProjectCard } from "../ProjectCard";
 
-export const PortfolioPage = () => {
+export const PortfolioPage = ({ isFixed }: IIsFixedNavbarProps) => {
   const { projects } = useAppContext();
 
   return (
@@ -26,6 +28,7 @@ export const PortfolioPage = () => {
           )}
         </ColFlexedCenter>
       </PageMarginTop>
+      <Footer isFixed={isFixed}></Footer>
     </>
   );
 };
