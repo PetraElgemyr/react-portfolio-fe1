@@ -10,6 +10,7 @@ import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
 import { ContactMeForm } from "../ContactMeForm";
 import { useLocation } from "react-router-dom";
 import { useAppContext } from "../hooks/useAppContext";
+import "../../scss/contactPage.scss";
 
 export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
@@ -48,37 +49,46 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
       <PageMarginTop>
         <ColCentered>
           <h1>Contact page</h1>
-          <CenteredArticle>
-            If you want to contact me or just connect, you can either email me
-            directly, contact me on Linkedin or use the contact form below to
-            send me a message. I will get back to you as soon as possible.
-          </CenteredArticle>
-          <ProjectCardText>
-            <StyledLink
-              target="_blank"
-              href="https://www.linkedin.com/in/petra-elgemyr-a707b724b/"
-            >
-              LinkedIn
-            </StyledLink>
-          </ProjectCardText>
 
-          <ProjectCardText>
-            Email:{"  "}
-            <StyledLink href="mailto: petra.elgemyr@gmail.com">
-              Petra.elgemyr@gmail.com
-            </StyledLink>
-          </ProjectCardText>
+          <div className="contact-container">
+            <section className="contact-text-container">
+              <CenteredArticle>
+                Hi there! If you want to contact me or just connect, you can
+                either email me or contact me on Linkedin. You can also use the
+                contact form to directly send me a message to my email from
+                here.
+              </CenteredArticle>
 
-          <ContactMeForm
-            formData={formData}
-            setFormData={(data: IFormData) => setFormData(data)}
-            formSubmitted={formSubmitted}
-            setFormSubmitted={(submitted: boolean) =>
-              setFormSubmitted(submitted)
-            }
-            sendEmail={sendEmail}
-            clearForm={clearForm}
-          />
+              <ProjectCardText>
+                <StyledLink
+                  target="_blank"
+                  href="https://www.linkedin.com/in/petra-elgemyr-a707b724b/"
+                >
+                  LinkedIn
+                </StyledLink>
+              </ProjectCardText>
+
+              <ProjectCardText>
+                Email:{"  "}
+                <StyledLink href="mailto: petra.elgemyr@gmail.com">
+                  Petra.elgemyr@gmail.com
+                </StyledLink>
+              </ProjectCardText>
+            </section>
+
+            <section className="contact-form-container">
+              <ContactMeForm
+                formData={formData}
+                setFormData={(data: IFormData) => setFormData(data)}
+                formSubmitted={formSubmitted}
+                setFormSubmitted={(submitted: boolean) =>
+                  setFormSubmitted(submitted)
+                }
+                sendEmail={sendEmail}
+                clearForm={clearForm}
+              />
+            </section>
+          </div>
         </ColCentered>
       </PageMarginTop>
 

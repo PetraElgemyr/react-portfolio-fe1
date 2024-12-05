@@ -29,9 +29,14 @@ export const ProjectCardTextCenterContainer = styled(Col)`
 export const ProjectCardText = styled.span`
   display: block;
   font-size: 1rem;
+  padding: 0 8% 0 8%;
 
   @media screen and (${devices.tablet}) {
     font-size: 1.1rem;
+    padding: 0 7% 0 7%;
+
+    width: 60%;
+    padding: 0 10% 0 10%;
   }
 
   @media screen and (${devices.laptop}) {
