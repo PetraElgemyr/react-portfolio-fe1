@@ -49,12 +49,12 @@ export const ContactPage = ({ isFixed }: IIsFixedNavbarProps) => {
     <>
       <PageMarginTop>
         <ColCentered>
-          <h1 className="title-mobile">Contact page</h1>
+          <h1 className="title-mobile">Let's connect!</h1>
 
           <div className="contact-container">
             <section className="contact-text-container">
               <ContactTitleLaptop className="title-laptop">
-                <h1 className="title-laptop">Contact page</h1>
+                <h1 className="title-laptop">Let's connect!</h1>
               </ContactTitleLaptop>
 
               <CenteredArticle>
