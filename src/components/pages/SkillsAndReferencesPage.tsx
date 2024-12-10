@@ -97,7 +97,7 @@ export const SkillsAndReferencesPage = ({ isFixed }: IIsFixedNavbarProps) => {
   return (
     <>
       <SkillPageTitle>
-        <h1>Skills page</h1>
+        <h1>Skills and references</h1>
       </SkillPageTitle>
       <div className="scene">
         <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
