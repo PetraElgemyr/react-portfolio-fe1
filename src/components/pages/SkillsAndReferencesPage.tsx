@@ -96,49 +96,6 @@ export const SkillsAndReferencesPage = ({ isFixed }: IIsFixedNavbarProps) => {
 
   return (
     <>
-      {/* <PageMarginTop>
-        <SkillPageTitle>
-          <h1>Skills page</h1>
-        </SkillPageTitle>
-        <div
-          style={{
-            width: "100vw",
-            height: "100vh",
-            margin: 0,
-            zIndex: 0,
-            position: "absolute",
-            top: 0,
-          }}
-        >
-          <Canvas
-            style={{ zIndex: 0 }}
-            camera={{ position: [0, 0, 20], fov: 80 }}
-          >
-            <OrbitControls
-              enableZoom={false}
-              zoomSpeed={1.5}
-              enablePan={false}
-            />
-            <ambientLight intensity={0.3} />
-            <pointLight position={[10, 10, 10]} />
-            {skills.map((skill, i) => (
-              <FloatingSkillBubble
-                key={i}
-                position={positions[i]}
-                skill={skill}
-              />
-            ))}
-          </Canvas>
-        </div>
-        <DownloadCvButtonContainer>
-          <StyledLinkButton
-            href="./public/PetraElgemyrCv.pdf"
-            download={"PetraElgemyrCv.pdf"}
-          >
-            Click here to download my resume/CV
-          </StyledLinkButton>
-        </DownloadCvButtonContainer>
-      </PageMarginTop> */}
       <SkillPageTitle>
         <h1>Skills page</h1>
       </SkillPageTitle>
