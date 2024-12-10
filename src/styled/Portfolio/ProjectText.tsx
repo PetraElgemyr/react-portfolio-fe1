@@ -30,6 +30,7 @@ export const ProjectCardText = styled.span`
   display: block;
   font-size: 1rem;
   padding: 0 8% 0 8%;
+  overflow: hidden;
 
   @media screen and (${devices.tablet}) {
     font-size: 1.1rem;
