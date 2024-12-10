@@ -29,7 +29,7 @@ export const AboutPage = ({ isFixed }: IIsFixedNavbarProps) => {
     <>
       <PageMarginTop>
         <ColCentered>
-          <h1>About me</h1>
+          <h1>Who am I?</h1>
           <ColFlexedCenter>
             <AboutMeImgDescriptionWrapper>
               <AboutImageContainer>
@@ -38,11 +38,21 @@ export const AboutPage = ({ isFixed }: IIsFixedNavbarProps) => {
 
               <AboutTextContainer>
                 <AboutText>
-                  Om mig... jag är based i sthlm Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Veritatis ipsam quidem
-                  reiciendis, distinctio voluptate, eum officia eos cum
-                  perferendis tempore quod velit voluptas aliquid quae inventore
-                  aliquam nam accusantium sit?
+                  My name is Petra Elgemyr and I'm based in Stockholm. I have
+                  always had a logic mind and felt creative so in 2022 I decided
+                  to jump on the oppertunity to become a front end developer.
+                  During my time at Medieinstitutet and my internships, I felt
+                  more and more that I wanted to explore more. Directly after my
+                  graduation as a front end developer in May 2024 I began my
+                  studies as a .Net web developer at Nackademin in August 2024.
+                </AboutText>
+
+                <AboutText>
+                  I find it exciting and evolving to widen my knowledge and to
+                  never stop learning! Here are a few of my projects. Some of
+                  them are school projects and some of them are made in my free
+                  time just for the fun of it. If you want to know more about
+                  me, you are welcome to contact me.
                 </AboutText>
               </AboutTextContainer>
             </AboutMeImgDescriptionWrapper>
