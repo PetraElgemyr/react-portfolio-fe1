@@ -12,8 +12,13 @@ import { Footer } from "../Footer";
 import { IIsFixedNavbarProps } from "../interfaces/IIsFixedNavbarProps";
 import { useLocation } from "react-router-dom";
 import { useAppContext } from "../hooks/useAppContext";
+import {
+  ReferenceContainer,
+  ReferenceText,
+  ReferenceTextName,
+} from "../../styled/Skills/ReferencesContainer";
 
-export const SkillsPage = ({ isFixed }: IIsFixedNavbarProps) => {
+export const SkillsAndReferencesPage = ({ isFixed }: IIsFixedNavbarProps) => {
   const location = useLocation();
   const { setActivePage } = useAppContext();
 
@@ -91,51 +96,8 @@ export const SkillsPage = ({ isFixed }: IIsFixedNavbarProps) => {
 
   return (
     <>
-      {/* <PageMarginTop>
-        <SkillPageTitle>
-          <h1>Skills page</h1>
-        </SkillPageTitle>
-        <div
-          style={{
-            width: "100vw",
-            height: "100vh",
-            margin: 0,
-            zIndex: 0,
-            position: "absolute",
-            top: 0,
-          }}
-        >
-          <Canvas
-            style={{ zIndex: 0 }}
-            camera={{ position: [0, 0, 20], fov: 80 }}
-          >
-            <OrbitControls
-              enableZoom={false}
-              zoomSpeed={1.5}
-              enablePan={false}
-            />
-            <ambientLight intensity={0.3} />
-            <pointLight position={[10, 10, 10]} />
-            {skills.map((skill, i) => (
-              <FloatingSkillBubble
-                key={i}
-                position={positions[i]}
-                skill={skill}
-              />
-            ))}
-          </Canvas>
-        </div>
-        <DownloadCvButtonContainer>
-          <StyledLinkButton
-            href="./public/PetraElgemyrCv.pdf"
-            download={"PetraElgemyrCv.pdf"}
-          >
-            Click here to download my resume/CV
-          </StyledLinkButton>
-        </DownloadCvButtonContainer>
-      </PageMarginTop> */}
       <SkillPageTitle>
-        <h1>Skills page</h1>
+        <h1>Skills and references</h1>
       </SkillPageTitle>
       <div className="scene">
         <Canvas camera={{ position: [0, 0, 20], fov: 75 }}>
@@ -161,6 +123,16 @@ export const SkillsPage = ({ isFixed }: IIsFixedNavbarProps) => {
           Click here to download my resume/CV
         </StyledLinkButton>
       </DownloadCvButtonContainer>
+      <ReferenceContainer>
+        <h2>References</h2>
+        <ReferenceTextName>{`Johanna Back, enhetschef it-utveckling på Sveriges Riksdag: `}</ReferenceTextName>
+        <ReferenceText>{`"Petra har gjort två praktikperioder (LIA 1&2) under 2023-2024 hos oss på Riksdagsförvaltningen. 
+        Under bägge praktiktillfällena har hon arbetat med systemutveckling gällande ny- och vidareutveckling inom både projekt
+         och förvaltning. Petra har arbetat i ett agilt utvecklingsteam med programmering i främst React och TypeScript. 
+         Petra har varit ett positivt bidrag till teamet och levererat stor nytta. Just nu har vi ingen möjlighet att själva anställa 
+         henne men skulle gärna vilja det om det blir tillfälle längre fram. Vi ger med nöje våra allra bästa rekommendationer och önskar 
+         henne lycka till framöver."`}</ReferenceText>
+      </ReferenceContainer>
       <Footer isFixed={isFixed}></Footer>
     </>
   );

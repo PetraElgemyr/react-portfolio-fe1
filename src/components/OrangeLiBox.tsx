@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { colors } from "../styled/Variables/Colors";
+import { devices } from "../styled/Variables/Devices";
 
 interface IOrangeLiBox {
   isActivePage: boolean;
 }
 
 export const OrangeLiBox = styled.li<IOrangeLiBox>`
-  padding: 10px;
+  padding: 10px 8px;
   text-decoration: none;
   color: white;
   list-style: none;
@@ -22,5 +23,9 @@ export const OrangeLiBox = styled.li<IOrangeLiBox>`
   &:hover {
     background-color: ${colors.primary_orange};
     border-radius: 5px;
+  }
+
+  @media screen and (${devices.laptop}) {
+    padding: 10px;
   }
 `;

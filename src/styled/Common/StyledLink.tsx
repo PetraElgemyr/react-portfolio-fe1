@@ -74,12 +74,12 @@ export const FooterText = styled.p`
 export const StyledLinkButton = styled(StyledLink)`
   border: 1px solid white;
   padding: 4%;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 6px 15px #ffffff42;
 
   @media screen and (${devices.tablet}) {
     padding: 3%;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
   @media screen and (${devices.laptop}) {

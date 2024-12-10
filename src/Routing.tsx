@@ -4,7 +4,7 @@ import { ContactPage } from "./components/pages/ContactPage";
 import { AboutPage } from "./components/pages/AboutPage";
 import { PortfolioPage } from "./components/pages/PortfolioPage";
 import { Navbar } from "./components/Navbar";
-import { SkillsPage } from "./components/pages/SkillsPage";
+import { SkillsAndReferencesPage } from "./components/pages/SkillsAndReferencesPage";
 import { useAppContext } from "./components/hooks/useAppContext";
 import { LinkUrls } from "./components/enums/LinkUrls";
 
@@ -27,7 +27,10 @@ export const Routing = () => {
           path="/portfolio"
           element={<PortfolioPage isFixed={isStartPage} />}
         />
-        <Route path="/skills" element={<SkillsPage isFixed={isStartPage} />} />
+        <Route
+          path="/skills"
+          element={<SkillsAndReferencesPage isFixed={isStartPage} />}
+        />
       </Routes>
     </Router>
   );
