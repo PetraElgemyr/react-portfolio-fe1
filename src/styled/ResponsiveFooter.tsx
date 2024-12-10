@@ -12,7 +12,7 @@ export const ResponsiveFooter = styled.footer<IResponsiveFooterProps>`
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 2000;
+  z-index: 1900;
   bottom: 0;
 
   position: ${(props) => props.isFixed && "fixed"};
