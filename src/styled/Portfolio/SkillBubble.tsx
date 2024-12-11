@@ -7,7 +7,7 @@ export const SkillBubble = styled.span`
   background-color: ${colors.primary_orange};
   padding: 3%;
   margin: 2%;
-  border-radius: 2px;
+  border-radius: 4px;
 
   @media screen and (${devices.tablet}) {
     padding: 2.5%;

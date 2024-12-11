@@ -41,13 +41,13 @@ export const ColFlexedCenter = styled(ColCentered)`
 
   @media screen and (${devices.laptop}) {
     flex-direction: row;
-    gap: 60px;
+    gap: 70px;
     padding: 4%;
     align-items: flex-start;
   }
 
   @media screen and (${devices.laptopL}) {
-    gap: 80px;
+    gap: 85px;
   }
 
   @media screen and (${devices.fourK}) {

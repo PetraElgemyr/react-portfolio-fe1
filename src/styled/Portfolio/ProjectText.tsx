@@ -5,14 +5,28 @@ import { devices } from "../Variables/Devices";
 export const ProjectCardTitle = styled.h4`
   font-size: 1.5rem;
   margin: 8%;
+  padding-left: 3%;
+
+  @media screen and (${devices.tablet}) {
+    margin: 6% 8%;
+  }
+
+  @media screen and (${devices.laptop}) {
+    padding: 5%;
+    margin: 4%;
+  }
 `;
 
 export const ProjectCardTextContainer = styled(Col)`
   justify-content: center;
   align-items: flex-start;
-  padding: 8%;
+  padding: 6%;
   padding-top: 2%;
   width: 100%;
+
+  @media screen and (${devices.tablet}) {
+    padding: 1% 4%;
+  }
 `;
 
 export const ProjectCardTextCenterContainer = styled(Col)`
@@ -29,18 +43,18 @@ export const ProjectCardTextCenterContainer = styled(Col)`
 export const ProjectCardText = styled.span`
   display: block;
   font-size: 1rem;
-  padding: 0 8% 0 8%;
+  padding: 0 6%;
   overflow: hidden;
 
   @media screen and (${devices.tablet}) {
     font-size: 1.1rem;
     padding: 0 7% 0 7%;
-    width: 90%;
+    width: 100%;
   }
 
   @media screen and (${devices.laptop}) {
     font-size: 1.2rem;
-    padding: 0 0 0 10%;
+    padding: 0 5%;
   }
 
   @media screen and (${devices.laptopL}) {
