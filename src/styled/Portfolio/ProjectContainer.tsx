@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { devices } from "../Variables/Devices";
 
 export const ProjectContainer = styled.section`
-  width: 85%;
+  width: 90%;
   border-radius: 10px 10px 5px 5px;
   box-shadow: 0 6px 12px #ffffff42;
   padding: 3px;
@@ -10,11 +10,11 @@ export const ProjectContainer = styled.section`
   background: linear-gradient(to bottom, #e9793a, #793ae9);
 
   @media screen and (${devices.tablet}) {
-    width: 68%;
+    width: 72%;
   }
 
   @media screen and (${devices.laptop}) {
-    width: 40%;
+    width: 44%;
     box-shadow: 0 6px 15px #ffffff42;
   }
 
