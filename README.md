@@ -50,6 +50,10 @@ npm run dev
 
 ## Resultat
 
+### Funktioner
+
+Besökare ska kunna interagera smått med 3D-elementen, navigera runt till olika delar oavsett enhet eller skärmstorlek. Besökare ska kunna se de projekt som visas samt besöka deras respektive länkar (github och eventuellt live). Det ska gå att ladda ner mitt cv via en knapp och besökare ska kunna kontakta mig direkt genom kontaktformuläret, med korrekt information ifylld. Vid felaktig inmatning ska användaren få relevanta felmeddelanden.
+
 ### Design
 
 Designen är baserad mycket på 3D färger, starka kontraster och mörkt tema. Designprinciper jag applicerat i mitt tänkande är kontrast, betoning, balans, hierarki, mönster och enhetlig design. Accentfärgerna är menade att få intressanta eller viktiga element att sticka ut. Självklart arbetar jag utefter mobile first där jag startar med mobilversionen och sedan skalar upp till tablet, laptop och större datorskärmar. På mobilversionen är det mesta av innehållet placerat i en kolumn, men det blir mer dynamiskt vid större skärmar då jag försöker hålla webbplatsen intressant genom olika typer av balanser/obalanser. Jag försökte även ha en lugnande hero på startsidan i min primära mörkblåa bakgrundsfärgen och min främsta accentfärg på 3D-texten för att få texten att sticka ut ännu mer.
