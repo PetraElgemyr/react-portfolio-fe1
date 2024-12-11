@@ -28,7 +28,7 @@ export const ProjectContainer = styled.section`
 `;
 
 export const BlackBox = styled.div`
-  background: black;
+  background: #040c1f;
   color: white;
   border-radius: 10px 10px 5px 5px;
   padding-bottom: 5%;
