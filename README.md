@@ -52,6 +52,22 @@ npm run dev
 
 ### Design
 
+Designen är baserad mycket på 3D färger, starka kontraster och mörkt tema. Designprinciper jag applicerat i mitt tänkande är kontrast, betoning, balans, hierarki, mönster och enhetlig design. Accentfärgerna är menade att få intressanta eller viktiga element att sticka ut. Självklart arbetar jag utefter mobile first där jag startar med mobilversionen och sedan skalar upp till tablet, laptop och större datorskärmar. På mobilversionen är det mesta av innehållet placerat i en kolumn, men det blir mer dynamiskt vid större skärmar då jag försöker hålla webbplatsen intressant genom olika typer av balanser/obalanser.
+
+#### Färger
+
+Jag bestämde mig för att en mörk bakgrund och orange som min primära accentfärg. Den orangea färgen valde jag för att göra portfolion personlig, då jag gillar den färgen. Komplementfärg till orange är blå vilket var den största orsaken till att jag valde min mörkblåa bakgrund. För en andra accentfärg använde jag Canvas Color Wheel som hittade en triadisk färg (triadic color) som jag använt på vissa (inte alltför många) ställen vid sidan av det oranga. En stark nästintill lysande lila som enligt mig passar ihop med den starka oranga och dämpade mörka bakgrunden.
+
+Accentfärger:
+
+- Orange #e9793a
+- Lila #793ae9
+- Mörkblå #01040e
+
+#### Bilder för mobil
+
+#### Bilder för dator
+
 ## Utvecklare
 
 - [Petra Elgemyr](https://github.com/PetraElgemyr)
