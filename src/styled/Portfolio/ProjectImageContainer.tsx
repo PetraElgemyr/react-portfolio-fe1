@@ -28,6 +28,10 @@ export const ProjectImage = styled.img`
   }
 
   @media screen and (${devices.laptopL}) {
-    height: 400px;
+    height: 420px;
+  }
+
+  @media screen and (${devices.fourK}) {
+    height: 480px;
   }
 `;
