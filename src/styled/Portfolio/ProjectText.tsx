@@ -54,7 +54,7 @@ export const ProjectCardText = styled.span`
 
   @media screen and (${devices.laptop}) {
     font-size: 1.2rem;
-    padding: 0 5%;
+    padding: 0 10%;
   }
 
   @media screen and (${devices.laptopL}) {
