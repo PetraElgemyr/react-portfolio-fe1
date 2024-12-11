@@ -66,15 +66,39 @@ Accentfärger:
 
 #### Bilder för mobil
 
-Startsidan med en hero som tar upp hela skärmhöjden:
+Startsida med en hero som tar upp hela skärmhöjden:
 ![Mobile first start](/public/readMeImages/startPageMobile.png)
+
+Om mig:
 ![Mobile first about](/public/readMeImages/aboutMobile.png)
+
+Kunskaper och referenser. Mönster med 3D och orange accentfärg som återkopplar till startsidan:
+![Mobile first skills](/public/readMeImages/skillsMobile.png)
+
+Enhetlig portfolio som upprepar designen för projekten:
 ![Mobile first portfolio 1](/public/readMeImages/portfolioMobile.png)
 ![Mobile first portfolio 2](/public/readMeImages/portfolio2Mobile.png)
-![Mobile first skills](/public/readMeImages/skillsMobile.png)
+
+Kontaktfomrulär och kontaktvägar:
 ![Mobile first contact](/public/readMeImages/contactMobile.png)
 
 #### Bilder för dator
+
+Startsida:
+![Desktop start](/public/readMeImages/startPageDesktop.png)
+
+Om mig:
+![Desktop about](/public/readMeImages/aboutDesktop.png)
+
+Kunskaper och referenser:
+![Desktop skills](/public/readMeImages/skillsDesktop.png)
+![Desktop references](/public/readMeImages/referencesDesktop.png)
+
+Portfolio
+![Desktop portfolio](/public/readMeImages/portfolioDesktop.png)
+
+Kontaktfomrulär och kontaktvägar:
+![Desktop contact](/public/readMeImages/contactDesktop.png)
 
 ## Utvecklare
 
