@@ -7,7 +7,7 @@ const textToType = [
   { text: "  name: ", className: "blue" },
   { text: '"Petra Elgemyr";', className: "default", sameLine: true },
   { text: "  age: ", className: "blue" },
-  { text: "22;", className: "green default", sameLine: true },
+  { text: "24;", className: "green default", sameLine: true },
   { text: "  location: ", className: "blue" },
   { text: '"Stockholm";', className: "default", sameLine: true },
   { text: "  likes: ", className: "blue" },
