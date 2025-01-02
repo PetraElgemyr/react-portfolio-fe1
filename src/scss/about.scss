@@ -13,7 +13,7 @@
         text-indent: 10%;
         width: 100%;
         margin: 0;
-        padding: 3%;
+        padding: 3% 1%;
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
@@ -30,7 +30,7 @@
     }
 
     .orange {
-        width: 55%;
+        width: 75%;
         color: rgba(238, 196, 119, 0.904);
     }
 
@@ -41,7 +41,7 @@
     .blue {
         color: rgba(173, 221, 253, 0.947);
         text-indent: 20px;
-        width: 55%;
+        width: 68%;
         text-wrap: nowrap;
         text-align: start;
         margin: 0;
@@ -49,6 +49,7 @@
 
         @media (min-width: v.$tablet) {
             text-indent: 30px;
+            width: 55%;
         }
     }
 
@@ -57,12 +58,13 @@
         margin: 0;
         padding: 0;
         text-align: start;
+        width: 40%;
     }
 }
 
 .default {
-    width: 80%;
     text-align: start;
+    text-overflow: ellipsis;
 }
 
 .unset-width {

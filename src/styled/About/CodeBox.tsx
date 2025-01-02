@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { devices } from "../Variables/Devices";
 
 export const CodeBox = styled.article`
-  width: 100%%;
-  padding: 2%;
+  width: 100%;
+  padding: 2% 0;
 
   @media screen and (${devices.tablet}) {
     padding: 5%;
