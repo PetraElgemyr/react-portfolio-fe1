@@ -29,7 +29,9 @@ export const ProjectCard = ({ project }: IProjectCardProps) => {
             <ProjectImageContainer>
               <ProjectImage src={project.img} alt={project.name}></ProjectImage>
             </ProjectImageContainer>
-            <ProjectCardTitle>{project.name}</ProjectCardTitle>
+            <ProjectCardTextContainer>
+              <ProjectCardTitle>{project.name}</ProjectCardTitle>
+            </ProjectCardTextContainer>
             <ProjectCardTextContainer>
               <ProjectCardText>{project.description}</ProjectCardText>
             </ProjectCardTextContainer>

@@ -2,20 +2,20 @@ import styled from "styled-components";
 import { Col } from "../Common/Common";
 import { devices } from "../Variables/Devices";
 
-export const ProjectCardTitle = styled.h4`
-  font-size: 1.5rem;
-  margin: 8%;
-  padding-left: 3%;
+// export const ProjectCardTitle = styled.h4`
+//   font-size: 1.5rem;
+//   margin: 8%;
+//   padding-left: 3%;
 
-  @media screen and (${devices.tablet}) {
-    margin: 6% 8%;
-  }
+//   @media screen and (${devices.tablet}) {
+//     margin: 6% 8%;
+//   }
 
-  @media screen and (${devices.laptop}) {
-    padding: 5%;
-    margin: 4%;
-  }
-`;
+//   @media screen and (${devices.laptop}) {
+//     padding: 5%;
+//     margin: 4%;
+//   }
+// `;
 
 export const ProjectCardTextContainer = styled(Col)`
   justify-content: center;
@@ -63,5 +63,20 @@ export const ProjectCardText = styled.span`
 
   @media screen and (${devices.fourK}) {
     font-size: 1.4rem;
+  }
+`;
+
+export const ProjectCardTitle = styled(ProjectCardText)`
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5% 6% 0% 6%;
+
+  @media screen and (${devices.tablet}) {
+    font-size: 1.8rem;
+    padding: 4% 6%;
+  }
+
+  @media screen and (${devices.laptop}) {
+    padding: 5% 10%;
   }
 `;
