@@ -16,6 +16,7 @@ export const SkillPageTitle = styled(ColCentered)`
   z-index: 1;
   width: 100%;
   top: 6%;
+  text-align: center;
 
   @media screen and (${devices.tablet}) {
     top: 11%;
