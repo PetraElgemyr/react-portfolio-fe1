@@ -28,7 +28,7 @@ export const PortfolioPage = ({ isFixed }: IIsFixedNavbarProps) => {
         <ColFlexedCenter>
           {projects.length > 0 ? (
             projects
-              .reverse()
+              .sort((a, b) => b.id - a.id)
               .map((p) => <ProjectCard key={p.id} project={p}></ProjectCard>)
           ) : (
             <article>Projects comming soon!</article>
