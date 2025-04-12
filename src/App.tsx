@@ -12,7 +12,7 @@ function App() {
     setProjects([
       {
         id: 6,
-        name: "Project Managent - Alpha",
+        name: "Project Management - Alpha",
         description:
           "A fullstack MVC project in ASP.NET — my first experience with the framework. The goal was to complete as much as possible before a deadline while learning to work with more complex solutions. I integrated tools such as the WYSIWYG editor Quill, Azure Blob Storage, and Identity. The project started with a local SQL Server database and was later deployed to Azure, including database and storage services.",
         github: "https://github.com/PetraElgemyr/Assignment-aspnet",
@@ -49,7 +49,7 @@ function App() {
       },
       {
         id: 4,
-        name: "Bokgninsystem Bakgården",
+        name: "Restaurang Bakgården",
         description:
           "This is a fullstack project which I made together with Jennifer McAllister. We made the entire design, front-end and back-end parts from scratch. We used NodeJs and a MongoDb database with vanilla javascript. For the front-end part we used React and typescript, along with some styled components. This is our first assignment working with context and reducer combined. We also tried to work agile with daily standups and github for pull requests and branches.",
         github: "https://github.com/PetraElgemyr/restaurant-fullstack",
