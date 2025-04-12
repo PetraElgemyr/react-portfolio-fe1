@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Pages } from "./enums/Pages";
 import { LinkUrls } from "./enums/LinkUrls";
 import "../scss/navbar.scss";
@@ -51,49 +51,49 @@ export const Navbar = () => {
       <nav ref={menuRef} className={`navbar${menuOpen ? "-open" : ""}`}>
         <ul>
           <OrangeLiBox isActivePage={activePage === LinkUrls.HOME && true}>
-            <Link
+            <NavLink
               to={LinkUrls.HOME}
               onClick={() => closeMenu(LinkUrls.HOME)}
-              className="nav-link"
+              className="navbar-li"
             >
               {Pages.HOME}
-            </Link>
+            </NavLink>
           </OrangeLiBox>
           <OrangeLiBox isActivePage={activePage === LinkUrls.ABOUT && true}>
-            <Link
+            <NavLink
               to={LinkUrls.ABOUT}
               onClick={() => closeMenu(LinkUrls.ABOUT)}
-              className="nav-link"
+              className="navbar-li"
             >
               {Pages.ABOUT}
-            </Link>
+            </NavLink>
           </OrangeLiBox>
           <OrangeLiBox isActivePage={activePage === LinkUrls.SKILLS && true}>
-            <Link
+            <NavLink
               to={LinkUrls.SKILLS}
               onClick={() => closeMenu(LinkUrls.SKILLS)}
-              className="nav-link"
+              className="navbar-li"
             >
               {Pages.SKILLS}
-            </Link>
+            </NavLink>
           </OrangeLiBox>
           <OrangeLiBox isActivePage={activePage === LinkUrls.PORTFOLIO && true}>
-            <Link
+            <NavLink
               to={LinkUrls.PORTFOLIO}
               onClick={() => closeMenu(LinkUrls.PORTFOLIO)}
-              className="nav-link"
+              className="navbar-li"
             >
               {Pages.PORTFOLIO}
-            </Link>
+            </NavLink>
           </OrangeLiBox>
           <OrangeLiBox isActivePage={activePage === LinkUrls.CONTACT && true}>
-            <Link
+            <NavLink
               to={LinkUrls.CONTACT}
               onClick={() => closeMenu(LinkUrls.CONTACT)}
-              className="nav-link"
+              className="navbar-li"
             >
               {Pages.CONTACT}
-            </Link>
+            </NavLink>
           </OrangeLiBox>
         </ul>
       </nav>

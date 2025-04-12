@@ -7,7 +7,7 @@ interface IOrangeLiBox {
 }
 
 export const OrangeLiBox = styled.li<IOrangeLiBox>`
-  padding: 10px 8px;
+  padding: 12px 9px;
   text-decoration: none;
   color: white;
   list-style: none;
@@ -25,7 +25,7 @@ export const OrangeLiBox = styled.li<IOrangeLiBox>`
     border-radius: 5px;
   }
 
-  @media screen and (${devices.laptop}) {
-    padding: 10px;
+  @media screen and (${devices.laptopL}) {
+    padding: 0.9rem;
   }
 `;
