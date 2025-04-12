@@ -11,11 +11,12 @@ function App() {
   useEffect(() => {
     setProjects([
       {
-        id: 1,
+        id: 6,
         name: "Project Managent - Alpha",
         description:
           "A fullstack MVC project in ASP.NET — my first experience with the framework. The goal was to complete as much as possible before a deadline while learning to work with more complex solutions. I integrated tools such as the WYSIWYG editor Quill, Azure Blob Storage, and Identity. The project started with a local SQL Server database and was later deployed to Azure, including database and storage services.",
         github: "https://github.com/PetraElgemyr/Assignment-aspnet",
+        liveLink: "",
         img: "/projectmanagement-add-project.png",
         techniques: [
           "ASP.NET",
@@ -23,6 +24,8 @@ function App() {
           "SQL",
           "Identity",
           "SignalR",
+          "Entity Framework Core",
+          "Quill WYSIWYG Editor",
           "Azure Blob Storage",
           "HTML",
           "CSS",
@@ -30,7 +33,22 @@ function App() {
         ],
       },
       {
-        id: 2,
+        id: 5,
+        name: "Database Design",
+        description:
+          "This assignment had focus on database normalization rules. I had to have at least 15 entities and got to learn how do divide data according to the normalization rules. The front end part was not a priority and was not graded. The main goal was to learn how to create a good database design according to SOLID. It should be easy to scale up and add functionality and the code should be structured in multiple projects, class libraries and a presentation layer. I also made integration tests to the CRUD functionality.",
+        github: "https://github.com/PetraElgemyr/databasteknik-assignment",
+        img: "/databasteknik.png",
+        techniques: [
+          "SqlServer",
+          "C#",
+          "Entity Framework Core",
+          "React",
+          "Typescript",
+        ],
+      },
+      {
+        id: 4,
         name: "Bokgninsystem Bakgården",
         description:
           "This is a fullstack project which I made together with Jennifer McAllister. We made the entire design, front-end and back-end parts from scratch. We used NodeJs and a MongoDb database with vanilla javascript. For the front-end part we used React and typescript, along with some styled components. This is our first assignment working with context and reducer combined. We also tried to work agile with daily standups and github for pull requests and branches.",
@@ -62,7 +80,7 @@ function App() {
         ],
       },
       {
-        id: 4,
+        id: 2,
         name: "Movie API",
         description:
           "MovieAPI is my first time working with an api and a very basic fullstack project. The site presents a list of well known movies. You can search for movies to see if they are on the list, show the list and add movies to the list. The project is made with JavaScript and GraphQL, which I use Apollo Server for. The data is stored in Google Sheet with SheetDB. This was only for learning purposes.",
@@ -71,7 +89,7 @@ function App() {
         techniques: ["GraphQL", "Apollo Server", "JavaScript", "CSS"],
       },
       {
-        id: 5,
+        id: 1,
         name: "Smartare än en PH-deltagare",
         description:
           'An assignment to make a quiz with basic frontend tools. I decided to create a parody of "Smartare än en femteklassare" with Paradise Hotel participants. The site is of course adaptable to different screen sizes, developed with mobile first.',
