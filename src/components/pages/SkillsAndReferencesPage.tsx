@@ -123,7 +123,7 @@ export const SkillsAndReferencesPage = ({ isFixed }: IIsFixedNavbarProps) => {
       </div>
       <DownloadCvButtonContainer>
         <StyledLinkButton
-          href="./Petra-Elgemyr-Webbutvecklare-cv.pdf"
+          href="./CV-Developer-Petra-Elgemyr.pdf"
           download={"PetraElgemyrCv.pdf"}
         >
           Click here to download my resume/CV
