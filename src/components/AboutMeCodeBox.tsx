@@ -25,13 +25,11 @@ const textToType = [
   { text: "  graduation: ", className: "blue" },
   { text: "2024;", className: "green default", sameLine: true },
   { text: "}", className: "orange" },
-  { text: ".current-education {", className: "orange" },
+  { text: ".education {", className: "orange" },
   { text: "  school: ", className: "blue" },
   { text: '"Nackademin";', className: "default", sameLine: true },
   { text: "  program: ", className: "blue" },
   { text: '".NET web developer";', className: "default", sameLine: true },
-  { text: "  graduation: ", className: "blue" },
-  { text: "2026;", className: "green default", sameLine: true },
   { text: "}", className: "orange-unset-width", last: true },
 ];
 

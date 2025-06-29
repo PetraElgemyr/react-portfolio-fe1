@@ -24,8 +24,8 @@
         }
 
         @media (min-width: v.$laptop) {
-            padding: 2.5%;
-            text-indent: 6%;
+            padding: 2.5% 1.5%;
+            text-indent: 4%;
         }
     }
 
@@ -64,10 +64,11 @@
 
 .default {
     text-align: start;
-    text-overflow: ellipsis;
+    text-overflow: initial;
 }
 
-.unset-width {
+.orange-unset-width {
+    color: rgba(238, 196, 119, 0.904);
     width: unset;
 }
 
